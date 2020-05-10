@@ -1,4 +1,62 @@
 .about__main {
-  background-color: aqua;
+  background-color: white;
   height: 700px;
+}
+
+.about__main__inner {
+  background-color: #e5e6e8;
+  text-align: center;
+  height: 200px;
+}
+.about__main__inner h1 {
+  margin-bottom: 50px;
+}
+.about__main__inner p {
+  padding-top: 30px;
+}
+
+.about__main__how {
+  background-color: white;
+}
+
+.about__main__how__inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.main2__photo {
+  height: 400px;
+  width: 400px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 80px;
+}
+
+.div1__main2 {
+  padding-top: 50px;
+  padding-left: 80px;
+}
+
+.about__main__how__inner p {
+  width: 0 auto;
+}
+
+.inner__container1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.about__main3 h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+.human {
+  margin: 100px 0;
+}
+.imghuman {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
 }
