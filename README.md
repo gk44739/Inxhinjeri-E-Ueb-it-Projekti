@@ -1,2 +1,2 @@
 # Inxhinjeri-E-Ueb-it-Projekti
-Projektit per inxhinjeri te Ueb-it
+Projektit per inxhinjeri te Ueb-it.
