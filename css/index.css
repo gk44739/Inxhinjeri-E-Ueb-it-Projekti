@@ -268,6 +268,7 @@ a.logo{
     color: #fff;
     background-color: #3794bc;
     border: none;
+    outline: none;
     cursor: pointer;
     padding: 10px 30px;
 }
@@ -294,6 +295,7 @@ a.logo{
 }
 .home__banner__inner button{
     border: none;
+    outline: none;
     border-radius: 30px;
     padding: 15px 40px;
     color:#3794bc;
