@@ -94,6 +94,7 @@ a.logo{
 }
 .home__slider__text{
     position: absolute;
+    padding: 0 15px;
     top: 50%;
     left: 0;
     transform: translate(0,-50%);
@@ -295,4 +296,27 @@ a.logo{
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+}
+.footer__links__subscribe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer__links{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+.footer__subscribe{
+    width: 50%;
+    border-left: 1px solid #ebebeb;
+}
+.footer__links__information,
+.footer__links__quick{
+    width:50%;
+}
+.footer__copyright{
+    text-align: center;
+    padding: 35px 0;
+    border-top: 1px solid #ebebeb;
 }
