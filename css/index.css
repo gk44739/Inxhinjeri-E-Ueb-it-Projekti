@@ -387,7 +387,7 @@ footer{
 #back__to__top{
     position: absolute;
     left: 50%;
-    bottom: 10%;
+    bottom: 55px;
     transform: translate(-50%,-50%);
     width: 35px;
     height: 35px;
@@ -403,4 +403,8 @@ footer{
     left: 10px;
     color: #fff;
     display: flex;
+}
+.on__top__fixed{
+    position: fixed;
+    bottom: 0;
 }
