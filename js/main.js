@@ -4,9 +4,9 @@ document.getElementById('back__to__top').addEventListener("click", function (){
 var ontop=document.getElementById('back__to__top');
 window.addEventListener('scroll', function() {
     if(window.pageYOffset > 500){
-        ontop.style.position="fixed";
+        ontop.classList.add("on__top__fixed");
     }else{
-        ontop.style.position="absolute";
+        ontop.classList.remove("on__top__fixed");
     }
 });
 

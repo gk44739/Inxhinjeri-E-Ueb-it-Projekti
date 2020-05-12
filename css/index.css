@@ -389,22 +389,27 @@ footer{
     left: 50%;
     bottom: 55px;
     transform: translate(-50%,-50%);
-    width: 35px;
-    height: 35px;
+    width: 0;
+    height: 0;
     border-radius: 50%;
     background-color: #3794bc;
     cursor: pointer;
-    transition: .10s;
+    transition: all .3s;
 }
 #back__to__top i{
     position: relative;
-    font-size: 25px;
+    font-size: 0;
     top: 10px;
     left: 10px;
     color: #fff;
-    display: flex;
+    transition: all .3s;
 }
-.on__top__fixed{
+#back__to__top.on__top__fixed{
     position: fixed;
-    bottom: 0;
+    bottom: 55px;
+    width: 35px;
+    height: 35px;
+}
+#back__to__top.on__top__fixed i{
+    font-size: 25px;
 }
