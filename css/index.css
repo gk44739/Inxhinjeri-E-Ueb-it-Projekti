@@ -245,9 +245,13 @@ a.logo{
     margin-bottom: 15px;
 }
 .home__product__description span{
+    content: "€";
     font-weight: bold;
     color: #3794bc;
     padding:0 15px;
+}
+.home__product__description span:before{
+    content: '\20ac';
 }
 .home__product__description i{
     padding-right: 5px;
@@ -296,6 +300,7 @@ a.logo{
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+    background-color: #fff;
 }
 footer{
     position: relative;
@@ -374,7 +379,7 @@ footer{
 .back__to__top{
     position: absolute;
     left: 50%;
-    bottom: 55px;
+    bottom: 10%;
     transform: translate(-50%,-50%);
     width: 35px;
     height: 35px;
