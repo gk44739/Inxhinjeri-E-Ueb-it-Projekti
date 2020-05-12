@@ -1,6 +1,5 @@
 .about__main {
   background-color: white;
-  height: 700px;
 }
 
 .about__main__inner {
@@ -9,7 +8,7 @@
   height: 200px;
 }
 .about__main__inner h1 {
-  margin-bottom: 50px;
+  padding-top: 30px;
 }
 .about__main__inner p {
   padding-top: 30px;
@@ -17,6 +16,8 @@
 
 .about__main__how {
   background-color: white;
+  display: flex;
+  flex-direction: row;
 }
 
 .about__main__how__inner {
@@ -51,12 +52,38 @@
   text-align: center;
   padding-top: 20px;
 }
+
 .human {
+  text-align: center;
   margin: 100px 0;
 }
+
 .imghuman {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 51%;
+}
+
+.peoplename {
+  margin-top: 15px;
+}
+
+.footer__links__information {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__links__information p {
+  margin-top: 30px;
+  flex-direction: column;
+  font-size: larger;
+  color: #7c7c7c;
+}
+
+.footer__links__quick p {
+  margin-top: 30px;
+  flex-direction: column;
+  font-size: larger;
+  color: #7c7c7c;
 }
