@@ -360,6 +360,7 @@ footer{
     border-bottom-right-radius:30px;
     cursor: pointer;
     padding: 15px 20px;
+    -webkit-appearance: none;
 }
 .footer__subscribe__social{
     width: 60%;
