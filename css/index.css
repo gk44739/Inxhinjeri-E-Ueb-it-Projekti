@@ -39,6 +39,7 @@ a.logo{
     padding: 15px 50px 15px 15px;
     border-radius: 30px;
     border: 2px solid #3794bc;
+    -webkit-appearance: none;
 }
 .header__main__inner form button:focus,
 .header__main__inner form input:focus{
@@ -347,6 +348,7 @@ footer{
     border-bottom-right-radius:0px;
     width: 100%;
     padding: 15px 20px;
+    -webkit-appearance: none;
 }
 .footer__subscribe input[type="submit"]{
     background-color: #3794bc;
