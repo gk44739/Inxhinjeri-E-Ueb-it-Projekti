@@ -338,6 +338,7 @@ footer{
 .footer__subscribe input[type="email"]{
     border: 1px solid #ebebeb;
     border-right: none;
+    outline: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     border-top-right-radius:0px;
@@ -350,6 +351,7 @@ footer{
     color: #fff;
     font-weight: bold;
     border: none;
+    outline: none;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-top-right-radius:30px;
