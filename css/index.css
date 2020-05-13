@@ -410,6 +410,10 @@ footer{
     width: 35px;
     height: 35px;
 }
+#back__to__top.on__top__fixed__scroll{
+    width: 0;
+    height: 0;
+}
 #back__to__top.on__top__fixed i{
     font-size: 25px;
 }
