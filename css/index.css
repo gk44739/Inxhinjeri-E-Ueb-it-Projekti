@@ -381,13 +381,13 @@ footer{
 }
 .footer__copyright{
     text-align: center;
-    padding: 35px 0;
+    padding: 20px 0;
     border-top: 1px solid #ebebeb;
 }
 #back__to__top{
     position: absolute;
     left: 50%;
-    bottom: 55px;
+    bottom: 25px;
     transform: translate(-50%,-50%);
     width: 0;
     height: 0;
@@ -406,7 +406,7 @@ footer{
 }
 #back__to__top.on__top__fixed{
     position: fixed;
-    bottom: 55px;
+    bottom: 25px;
     width: 35px;
     height: 35px;
 }
