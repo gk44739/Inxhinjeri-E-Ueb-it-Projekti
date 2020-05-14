@@ -1,5 +1,5 @@
 document.getElementById('back__to__top').addEventListener("click", function (){ 
-    window.scrollTo(0, 0); 
+    window.scrollTo(0,0); 
 });
 var ontop=document.getElementById('back__to__top');
 var prevScrollpos = window.pageYOffset;
