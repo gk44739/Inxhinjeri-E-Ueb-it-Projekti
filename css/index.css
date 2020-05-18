@@ -247,7 +247,6 @@ a.logo{
     margin-bottom: 15px;
 }
 .home__product__description span{
-    content: "€";
     font-weight: bold;
     color: #3794bc;
     padding:0 15px;
