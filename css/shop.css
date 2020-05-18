@@ -1,0 +1,15 @@
+.shop__tittle__banner{
+    background-color: #e5e6e8;
+}
+.shop__tittle__banner__inner{
+    text-align: center;
+    padding: 80px 0;
+}
+.shop__tittle__banner__inner h1,
+.shop__tittle__banner__inner p{
+    margin: 20px 0;
+}
+.shop__product__inner{
+    display: flex;
+    flex-direction: row;
+}
