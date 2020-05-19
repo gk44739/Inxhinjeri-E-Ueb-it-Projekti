@@ -1,0 +1,141 @@
+.conatact__main__inner {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  margin: 64px auto;
+  align-items: flex-start;
+  margin-bottom: 82px;
+}
+
+.contact_form_contaier {
+  display: flex;
+  border: 1px solid #EBEBEB;
+  padding: 16px;
+  flex: 3;
+  flex-direction: column;
+}
+
+.contact_form_contaier h3 {
+  width: 67.8%;
+  align-self: flex-end;
+  margin-bottom: 42px;
+}
+
+.contact_form_contaier form {
+  margin-bottom: 44px;
+}
+
+.form_item {
+  margin-bottom: 16px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form_item input, select {
+  width: 60%;
+  padding: 6px
+}
+
+.message_item {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.message_item textarea {
+  width: 67.8%;
+  padding: 6px
+}
+
+.submit_button {
+  color: #fff;
+  background-color: #3794bc;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 30px;
+  float: right;
+  margin-top: 46px;
+  text-transform: uppercase;
+}
+
+.fileContainer {
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  background-color: #3794bc;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 22px;
+  text-transform: uppercase;
+  font-size: 14px;
+
+}
+
+.fileContainer [type=file] {
+  cursor: inherit;
+  display: block;
+  font-size: 999px;
+  filter: alpha(opacity=0);
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+
+.attc { 
+  width: 91%;
+  margin: 26px 0;
+}
+
+.optional  {
+  color: gray;
+  margin-left: 16px;
+}
+
+.info {
+  border: 1px solid #EBEBEB;
+  margin-right: 16px;
+  padding: 14px;
+  flex: 1;
+}
+
+.store_information h3 {
+  margin-bottom: 18px;
+}
+
+.store_information p {
+  margin-bottom: 12px;
+}
+
+.store_information {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: #EBEBEB 0.5px solid;
+}
+
+.email_contact h3 {
+  margin-bottom: 18px;
+}
+
+.email_contact {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .conatact__main__inner {
+    flex-direction: column;
+  }
+  .contact_form_contaier {
+    width: 100%;
+  } 
+  .info {
+    width: 100%;
+  }
+}
