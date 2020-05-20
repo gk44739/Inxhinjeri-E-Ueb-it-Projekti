@@ -1,0 +1,70 @@
+
+.login__signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#3794bc;
+}
+.login__signup__inner{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border-radius: 20px;
+    width: 800px;
+    height: 450px;
+    background-color:#fff;
+    border-radius: 20px;
+}
+.login__form,
+.login__signup__description{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+}
+.login__form h1{
+    margin-bottom: 30px;
+}
+.login__form form input{
+    width: 70%;
+    border: 1px solid #3794bc;
+    border-radius: 20px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+.login__form p{
+    margin-top: 10px;
+}
+.login__form p a{
+    text-decoration: none;
+    color: #000;
+}
+.login__signup__description{
+    border-left: 1px solid #ebebeb;
+}
+.login__signup__description a button,
+.login__form a button{
+    margin-top: 20px;
+    border: 1px solid #3794bc;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background-color: #3794bc;
+    color: #ffff;
+    cursor: pointer;
+}
+.login__signup__description a button:hover,
+.login__form a button:hover{
+    background-color: #fff;
+    border: 1px solid #3794bc;
+    color: #3794bc;
+}
+.login__signup__description h1{
+    margin-bottom: 30px;
+}
+.login__signup__description p{
+    margin-bottom: 30px;
+}
