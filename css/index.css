@@ -397,6 +397,10 @@ footer{
     cursor: pointer;
     transition: all .3s;
 }
+#back__to__top:hover{
+    background-color: #fff;
+    border: 1px solid #3794bc;
+}
 #back__to__top i{
     position: relative;
     font-size: 0;
@@ -404,6 +408,9 @@ footer{
     left: 10px;
     color: #fff;
     transition: all .3s;
+}
+#back__to__top i:hover{
+    color: #3794bc;
 }
 #back__to__top.on__top__fixed{
     position: fixed;
