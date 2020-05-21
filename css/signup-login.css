@@ -26,10 +26,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 0 15px;
 }
-.login__form{
+.signup__form form,
+.login__form form,
+.signup__description form,
+.login__description form{
+    width: 100%;
+}
+.signup__form{
     display: none;
+    transition: all .3s;
 }
 .signup__form h1,
 .login__form h1{
@@ -53,17 +61,20 @@
     text-decoration: none;
     color: #000;
 }
-.login__description{
+.login__form p a:hover{
+    text-decoration: underline;
+}
+.signup__description{
     display: none;
 }
 .login__description,
 .signup__description{
     border-left: 1px solid #ebebeb;
 }
-.login__description a button,
-.signup__description a button,
-.signup__form a button,
-.login__form a button{
+#login__rid,
+#signup__rid,
+.signup__form button,
+.login__form button{
     margin-top: 20px;
     border: 1px solid #3794bc;
     border-radius: 20px;
@@ -74,10 +85,10 @@
     outline: none;
 }
 
-.login__description a button:hover,
-.signup__description a button:hover,
-.signup__form a button:hover,
-.login__form a button:hover{
+#login__rid:hover,
+#signup__rid:hover,
+.signup__form button:hover,
+.login__form button:hover{
     background-color: #fff;
     border: 1px solid #3794bc;
     color: #3794bc;
