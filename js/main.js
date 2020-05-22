@@ -73,6 +73,9 @@ if(prev__button){
                     prev__div.classList.add('visible');
                     div.classList.remove('visible');
                     break;
+                }else if(div.classList.contains('visible') && index==0){
+                    home__slider__content.lasrChild.classList.add('visible');
+                    div.classList.remove('visible');
                 }
             }
     });
