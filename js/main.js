@@ -77,6 +77,7 @@ if(prev__button){
                     home__slider__content.lasrChild.classList.add('visible');
                     div.classList.remove('visible');
                 }
+                
             }
     });
 }
