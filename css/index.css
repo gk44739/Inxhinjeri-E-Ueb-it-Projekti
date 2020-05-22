@@ -4,8 +4,14 @@
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
 }
+header{
+    position: relative;
+    z-index: 999;
+    background-color: #fff;
+}
 .header__top{
     border-bottom: 1px solid #e1e1e1;
+    background-color: #fff;
     display: none;
 }
 .header__top__inner{
@@ -28,9 +34,8 @@ a.logo{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 40px 0;
+    padding: 40px 0;
 }
-
 .header__main__inner form{
     position: relative;
 }
@@ -60,10 +65,14 @@ a.logo{
     color: #3794bc;
     font-size: 25px;
 }
+#header__nav{
+    transition: ease .3s;
+}
 .sticky{
-    width: 100%;
-    top: 0;
     position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;  
 }
 .header__bar{
     background-color: #3794bc;
@@ -81,16 +90,61 @@ a.logo{
     flex-direction: row;
     justify-content: space-between;
     padding:25px 0;
+    
     color:#fff;
 }
 .home__slider{
     background-color: #e6e6e6;
 }
-.home__slider,
 .home__slider__inner{
     position: relative;
 }
-.home__slider__inner img{
+.home__slider,
+.home__slider__content{
+    position: relative;
+}
+.home__slider__content{
+    position: absolute;
+    opacity: 0;
+    top: -500px;
+    visibility: hidden;
+}
+.home__slider__content.visible{
+    position: relative;
+    top: 0;
+    opacity: 1;
+    transition: all 1s;
+    visibility: visible;
+}
+#prev__button,
+#next__button{
+    position: absolute;
+    top:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3794bc;
+    border: 1px solid #3794bc;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: ease-in-out .2s;
+}
+#prev__button{
+    left: 0;
+}
+#next__button{
+    right: 0;
+}
+#prev__button:hover,
+#next__button:hover{
+    background-color:#e6e6e6;
+    color: #3794bc;
+}
+
+.home__slider__content img{
     width: 100%;
     object-fit: cover;
 }
@@ -98,7 +152,7 @@ a.logo{
     position: absolute;
     padding: 0 15px;
     top: 50%;
-    left: 0;
+    left: 5%;
     transform: translate(0,-50%);
 }
 .home__slider__text h1{
@@ -119,8 +173,8 @@ a.logo{
 .home__slider__text button:focus{
     outline: none;
 }
-.home__slider__inner p,
-.home__slider__inner h1{
+.home__slider__content p,
+.home__slider__content h1{
     margin-bottom: 50px;
 }
 .home__info__boxes__inner{
