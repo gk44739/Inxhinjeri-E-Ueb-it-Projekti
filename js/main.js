@@ -80,6 +80,21 @@ if(prev__button){
             }
     });
 }
+var shopidx=0;
+var shop_list=document.getElementsByClassName('shop__thumbnails__li');
+for (var index = 0; index < shop_list.length; index++) {
+    const element = shop_list[index]
+    if(element){
+        element.addEventListener("click",function(){
+            var src= element.getElementsByTagName("img")[0].src;
+            document.getElementsByClassName("shop__product__img")[0].getElementsByTagName("img")[0].src = src;
+            var currentactive=document.getElementsByClassName('active')[0];
+            currentactive.className= currentactive.className.replace("active","");
+            this.classList.add("active");
+            
+        });
+    }
+}
 
 function autoPlay(){
     var index=0;

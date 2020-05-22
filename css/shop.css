@@ -99,7 +99,7 @@
     cursor: pointer;
 }
 .shop__product__img__nav ul li:hover,
-.shop__product__img__nav ul li .active{
+.shop__product__img__nav ul li.active{
     border: 1px solid #3794bc;
 }
 .shop__product__img__nav ul li img{
