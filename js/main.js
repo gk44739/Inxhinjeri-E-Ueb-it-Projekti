@@ -1,21 +1,21 @@
 window.onload=auto__slider;
 
 var sticky__header=document.getElementById('header__nav');
+if(sticky__header){
 var sticky = sticky__header.offsetTop;
-window.onscroll=function stickyHeader(){
-    if (window.pageYOffset > sticky) {
-        sticky__header.classList.add("sticky");
-    } else {
-        sticky__header.classList.remove("sticky");
+    window.onscroll=function stickyHeader(){
+        if (window.pageYOffset > sticky) {
+            sticky__header.classList.add("sticky");
+        } else {
+            sticky__header.classList.remove("sticky");
+        }
     }
 }
-
 var loginbtn=document.getElementById('login__rid');
 if(loginbtn){
     loginbtn.addEventListener("click", function (){
         document.getElementsByClassName('signup__description')[0].style.display='none';
         document.getElementsByClassName('signup__form')[0].style.display='none';
-        document.getElementsByClassName('signup__form')[0].style.opacity='1';
         document.getElementsByClassName('login__description')[0].style.display='flex';
         document.getElementsByClassName('login__form')[0].style.display='flex';
     });

@@ -37,8 +37,7 @@
 }
 .signup__form{
     display: none;
-    opacity: 0;
-    transition: ease-in 3s;
+
 }
 .signup__form h1,
 .login__form h1{
