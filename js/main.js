@@ -80,7 +80,8 @@ if(prev__button){
             }
     });
 }
-var shopidx=0;
+
+
 var shop_list=document.getElementsByClassName('shop__thumbnails__li');
 for (var index = 0; index < shop_list.length; index++) {
     const element = shop_list[index]
