@@ -106,7 +106,7 @@ a.logo{
 .home__slider__content{
     position: absolute;
     opacity: 0;
-    top: -500px;
+    top: -200px;
     visibility: hidden;
 }
 .home__slider__content.visible{
