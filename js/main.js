@@ -36,8 +36,7 @@ var auto__slider=setInterval(autoPlay,4000);
 var next__button=document.getElementById('next__button');
 if(next__button){
     next__button.addEventListener("click",function(){
-        clearInterval(auto__slider);
-        auto__slider=setInterval(auto__slider,4000);
+        clearTimeout(auto__slider);
         var index=0;
         var home__slider__content=document.getElementsByClassName('home__slider__content');
         for(var div of home__slider__content){
@@ -59,6 +58,7 @@ if(next__button){
 var prev__button=document.getElementById('prev__button');
 if(prev__button){
     prev__button.addEventListener("click",function(){
+        clearTimeout(auto__slider);
         var index=0;
         var home__slider__content=document.getElementsByClassName('home__slider__content');
         var last__slide=home__slider__content[home__slider__content-1];
@@ -97,6 +97,20 @@ for (var index = 0; index < shop_list.length; index++) {
     }
 }
 
+var minus=document.getElementById('minus');
+var plus=document.getElementById('plus');
+var inputval=document.getElementsByClassName('costum__input')[0].getElementsByTagName('input')[0];
+    minus.addEventListener("click",function(){
+        if(inputval.value<=1){
+            return
+        }else{
+            inputval.value = parseInt(inputval.value) - 1;
+        }
+    });
+    plus.addEventListener("click",function(){
+        inputval.value = parseInt(inputval.value) + 1;
+    });
+
 function autoPlay(){
     var index=0;
     var home__slider__content=document.getElementsByClassName('home__slider__content');
@@ -134,6 +148,5 @@ window.addEventListener('scroll', function() {
     prevScrollpos = currentScrollPos;
     
 });
-
 
 
