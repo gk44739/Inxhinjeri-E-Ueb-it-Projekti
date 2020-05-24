@@ -53,13 +53,19 @@ select{
 .submit_button {
   color: #fff;
   background-color: #3794bc;
-  border: none;
+  border: 1px solid transparent;
   outline: none;
   cursor: pointer;
   padding: 10px 30px;
   float: right;
   margin-top: 46px;
   text-transform: uppercase;
+  transition: ease-in-out .3s;
+}
+.submit_button:hover{
+  background-color: #fff;
+  color: #3794bc;
+  border: 1px solid #3794bc;
 }
 .fileContainer {
   position: relative;
@@ -112,7 +118,6 @@ select{
 .email_contact h3 {
   margin-bottom: 18px;
 }
-
 .email_contact {
   margin-bottom: 8px;
 }
