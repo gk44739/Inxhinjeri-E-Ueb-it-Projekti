@@ -1,41 +1,48 @@
+.contact__tittle__banner{
+  background-color: #e5e6e8;
+}
+.contact__tittle__banner__inner{
+  text-align: center;
+  padding: 80px 0;
+}
+.contact__tittle__banner__inner h1,
+.contact__tittle__banner__inner p{
+  margin: 20px 0;
+}
 .conatact__main__inner {
   display: flex;
-  max-width: 1000px;
-  width: 100%;
-  margin: 64px auto;
-  align-items: flex-start;
+  margin: 65px auto;
   margin-bottom: 82px;
 }
 
 .contact_form_contaier {
   display: flex;
   border: 1px solid #EBEBEB;
-  padding: 16px;
+  padding: 30px;
   flex: 3;
   flex-direction: column;
 }
 
-.contact_form_contaier h3 {
-  width: 67.8%;
-  align-self: flex-end;
-  margin-bottom: 42px;
+.contact_form_contaier h1 {
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .contact_form_contaier form {
-  margin-bottom: 44px;
+  margin-bottom: 45px;
 }
 
 .form_item {
   margin-bottom: 16px;
-  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.form_item input, select {
+.form_item input,
+select{
   width: 60%;
-  padding: 6px
+  padding: 10px 15px;
 }
 
 .message_item {
@@ -45,8 +52,10 @@
 }
 
 .message_item textarea {
-  width: 67.8%;
-  padding: 6px
+  width: 60%;
+  height: 200px;
+  padding: 10px 15px;
+  resize: vertical ;
 }
 
 .submit_button {
@@ -62,7 +71,6 @@
 }
 
 .fileContainer {
-  overflow: hidden;
   position: relative;
   color: #fff;
   background-color: #3794bc;
@@ -75,25 +83,20 @@
 
 }
 
-.fileContainer [type=file] {
-  cursor: inherit;
-  display: block;
-  font-size: 999px;
-  filter: alpha(opacity=0);
-  min-height: 100%;
-  min-width: 100%;
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  text-align: right;
-  top: 0;
+.fileContainer input[type="file"] {
+  display: none;
 }
-
 .attc { 
-  width: 91%;
+  width: 100%;
   margin: 26px 0;
 }
-
+.form_item_inner{
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
 .optional  {
   color: gray;
   margin-left: 16px;
@@ -102,8 +105,9 @@
 .info {
   border: 1px solid #EBEBEB;
   margin-right: 16px;
-  padding: 14px;
+  padding: 30px;
   flex: 1;
+  height: 100%;
 }
 
 .store_information h3 {
@@ -126,16 +130,4 @@
 
 .email_contact {
   margin-bottom: 8px;
-}
-
-@media (max-width: 768px) {
-  .conatact__main__inner {
-    flex-direction: column;
-  }
-  .contact_form_contaier {
-    width: 100%;
-  } 
-  .info {
-    width: 100%;
-  }
 }

@@ -121,6 +121,12 @@ input[type="number"]::-webkit-inner-spin-button {
     padding: 20px 30px;
     border: none;
     cursor: pointer;
+    border: 1px solid #3794bc;
+    transition: ease-in-out .3s;
+}
+.shop__product__text form button:hover{
+    background-color: #fff;
+    color: #3794bc;
 }
 .shop__product__photos{
     display: flex;

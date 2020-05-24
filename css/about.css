@@ -5,19 +5,18 @@
 .about__main__inner {
   background-color: #e5e6e8;
   text-align: center;
-  height: 200px;
+  padding: 80px 0;
 }
-.about__main__inner h1 {
-  padding-top: 30px;
-}
+.about__main__inner h1,
 .about__main__inner p {
-  padding-top: 30px;
+  margin:20px 0;
 }
 
 .about__main__how {
   background-color: white;
   display: flex;
   flex-direction: row;
+  margin: 50px 0;
 }
 
 .about__main__how__inner {
@@ -26,16 +25,17 @@
 }
 
 .main2__photo {
-  height: 400px;
-  width: 400px;
-  padding-top: 50px;
-  padding-bottom: 30px;
-  padding-left: 80px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
+.div__main2,
 .div1__main2 {
-  padding-top: 50px;
-  padding-left: 80px;
+  width: 50%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about__main__how__inner p {
@@ -67,6 +67,7 @@
 
 .peoplename {
   margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .footer__links__information {

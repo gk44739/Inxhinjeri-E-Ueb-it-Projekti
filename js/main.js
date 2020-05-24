@@ -1,4 +1,3 @@
-window.onload=auto__slider;
 
 var sticky__header=document.getElementById('header__nav');
 if(sticky__header){
@@ -31,22 +30,24 @@ if(signupbtn){
 
     });
 }
-
-var auto__slider=setInterval(autoPlay,4000);
+window.onload=function(){
+var slideTime=setInterval(autoPlay,4000);
 var next__button=document.getElementById('next__button');
 if(next__button){
     next__button.addEventListener("click",function(){
-        clearTimeout(auto__slider);
+        clearInterval(slideTime);
+        slideTime=setInterval(autoPlay,4000);
         var index=0;
         var home__slider__content=document.getElementsByClassName('home__slider__content');
         for(var div of home__slider__content){
             index++;
+            var next__div=div.nextElementSibling;
             if(div.classList.contains('visible') && index<home__slider__content.length){
-                var next__div=div.nextElementSibling;
                 next__div.classList.add('visible');
                 div.classList.remove('visible');
                 break;
-            }else if(div.classList.contains('visible') && index==home__slider__content.length){
+            }
+            else if(div.classList.contains('visible') && index==home__slider__content.length){
                 home__slider__content[0].classList.add('visible');
                 div.classList.remove('visible');
                 break;
@@ -58,58 +59,33 @@ if(next__button){
 var prev__button=document.getElementById('prev__button');
 if(prev__button){
     prev__button.addEventListener("click",function(){
-        clearTimeout(auto__slider);
+        clearInterval(slideTime);
+        slideTime=setInterval(autoPlay,4000);
         var index=0;
         var home__slider__content=document.getElementsByClassName('home__slider__content');
-        var last__slide=home__slider__content[home__slider__content-1];
+        var last__slide=home__slider__content[home__slider__content.length-1];
             for(var div of home__slider__content){
                 index++;
-                var prev__div=div.previousElementSibling;
+                prev__div=div.previousElementSibling;
                 if(div.classList.contains('visible') && index<home__slider__content.length){
-                    prev__div.classList.add('visible');
-                    div.classList.remove('visible');
-                break;
+                    prev__div=div.previousElementSibling;
+                    if(prev__div==null){
+                        last__slide.classList.add('visible');
+                        div.classList.remove('visible');
+                        break;
+                    }else{
+                        prev__div.classList.add('visible');
+                        div.classList.remove('visible');
+                        break;
+                    }
                 }else if(div.classList.contains('visible') && index==home__slider__content.length){
                     prev__div.classList.add('visible');
                     div.classList.remove('visible');
                     break;
-                }else if(div.classList.contains('visible') && index==0){
-                    home__slider__content.lasrChild.classList.add('visible');
-                    div.classList.remove('visible');
-                }   
+                }
             }
     });
 }
-
-
-var shop_list=document.getElementsByClassName('shop__thumbnails__li');
-for (var index = 0; index < shop_list.length; index++) {
-    const element = shop_list[index]
-    if(element){
-        element.addEventListener("click",function(){
-            var src= element.getElementsByTagName("img")[0].src;
-            document.getElementsByClassName("shop__product__img")[0].getElementsByTagName("img")[0].src = src;
-            var currentactive=document.getElementsByClassName('active')[0];
-            currentactive.className= currentactive.className.replace("active","");
-            this.classList.add("active");
-            
-        });
-    }
-}
-
-var minus=document.getElementById('minus');
-var plus=document.getElementById('plus');
-var inputval=document.getElementsByClassName('costum__input')[0].getElementsByTagName('input')[0];
-    minus.addEventListener("click",function(){
-        if(inputval.value<=1){
-            return
-        }else{
-            inputval.value = parseInt(inputval.value) - 1;
-        }
-    });
-    plus.addEventListener("click",function(){
-        inputval.value = parseInt(inputval.value) + 1;
-    });
 
 function autoPlay(){
     var index=0;
@@ -128,15 +104,50 @@ function autoPlay(){
         }
     }
 }
+}
+var shop_list=document.getElementsByClassName('shop__thumbnails__li');
+for (var index = 0; index < shop_list.length; index++) {
+    const element = shop_list[index];
 
+    if(element){
+        element.addEventListener("click",function(){
+            var src= element.getElementsByTagName("img")[0].src;
+            var img = document.getElementsByClassName("shop__product__img")[0].getElementsByTagName("img")[0].src = src;
+            var currentactive=document.getElementsByClassName('active')[0];
+            currentactive.className= currentactive.className.replace("active","");
+            this.classList.add("active");
+            
+        });
+    }
+}
+
+var minus=document.getElementById('minus');
+var plus=document.getElementById('plus');
+
+if(minus){
+    minus.addEventListener("click",function(){
+        var inputval=document.getElementsByClassName('costum__input')[0].getElementsByTagName('input')[0];
+        if(inputval.value<=1){
+            return
+        }else{
+            inputval.value = parseInt(inputval.value) - 1;
+        }
+    });
+}
+if(plus){
+    plus.addEventListener("click",function(){
+        var inputval=document.getElementsByClassName('costum__input')[0].getElementsByTagName('input')[0];
+        inputval.value = parseInt(inputval.value) + 1;
+    });
+
+}
 var back__to__top=document.getElementById('back__to__top');
 if(back__to__top){
     back__to__top.addEventListener("click", function (){ 
-        window.scrollTo(0,0); 
+        window.scrollTo(0,0)
     });
 }
 var ontop=document.getElementById('back__to__top');
-
 var prevScrollpos = window.pageYOffset;
 window.addEventListener('scroll', function() {
     var currentScrollPos = window.pageYOffset;
