@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-    <title>Project</title>
+    <title>E Shop</title>
     <head>
+        <!-- FAVICON -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <!-- FAVICON -->
         <link rel="stylesheet" href="css/fontawesome.css">
         <link rel="stylesheet" href="css/default.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/home.css">
+        
     </head>
     <body> 
         <header>
@@ -12,7 +22,7 @@
                 <div class="container">
                     <div class="header__top__inner">
                         <p>Wellcome to Our Store !</p>
-                        <p><a href="#">Sing In / Log In</a></p>
+                        <p><a href="index.html">Sing In / Log In</a></p>
                     </div>
                 </div>
             </div>
@@ -21,13 +31,16 @@
                 <div class="container">
                     <div class="header__main__inner">
                         <!-- <a href="#"><img src="#"></a> -->
-                        <a href="#" class="logo">Logo.</a>
+                        <a href="home.html" class="logo"><span>E</span> Shop.</a>
                         <form>
                             <input type="text" name="search" placeholder="Search...">
                             <button><i class="fas fa-search"></i></button>
                         </form>
-                        <div class="chart">
-                            <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                        <div class="cart">
+                            <a href="#">
+                                <span>1</span>
+                                <i class="fas fa-shopping-bag"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -54,8 +67,8 @@
                     <div class="home__slider__content visible">
                         
                             <div class="home__slider__text">
-                                <h1>Mac Book Pro 16 inch</h1>
-                                <p>Power by Intel V-Pro Ice Lake 10nm Tecnology</p>
+                                <h1>MacBook Pro 16”</h1>
+                                <p>Up to 8-core Intel Core i9 processor</p>
                                 <button>View details</button>
                             </div>
                             <div class="home__slider__image">
@@ -68,8 +81,8 @@
                     <div class="home__slider__content">
                    
                             <div class="home__slider__text">
-                                <h1>Mac book Pro 13 inch</h1>
-                                <p>Power by Intel V-Pro Ice Lake 10nm Tecnology</p>
+                                <h1>MacBook Pro 13”</h1>
+                                <p>Up to 4-core Intel Core i7 processor</p>
                                 <button>View details</button>
                             </div>
                             <div class="home__slider__image">
@@ -81,8 +94,8 @@
                     <div class="home__slider__content">
                    
                         <div class="home__slider__text">
-                            <h1>HP elitebook</h1>
-                            <p>Power by Intel V-Pro Ice Lake 10nm Tecnology</p>
+                            <h1>HP Elite Dragonfly</h1>
+                            <p>Ultralight, and ready to impress</p>
                             <button>View details</button>
                         </div>
                         <div class="home__slider__image">
@@ -94,8 +107,8 @@
                     <div class="home__slider__content">
                    
                         <div class="home__slider__text">
-                            <h1>Huawei</h1>
-                            <p>Power by Intel V-Pro Ice Lake 10nm Tecnology</p>
+                            <h1>Huawei Matebook X PRO 13.9"</h1>
+                            <p>World's First FullView Display: Immersive 13.9-inch 3K touchscreen</p>
                             <button>View details</button>
                         </div>
                         <div class="home__slider__image">
@@ -167,10 +180,70 @@
             </div>
         </div>
 
-        <div class="home__products">
+        <div id="to__products" class="home__products">
             <div class="container">
                 <div class="home__products__inner">
                     <h1>Products</h1>
+                    <div class="home__products__row">
+
+                        <a href="shop.html">
+                            <div class="home__product">
+                                <img src="img/product-1.png">
+                                <div class="home__product__description">
+                                    <p>PowerWave wireless Charge</p>
+                                    <span class="old__price">103.20</span>
+                                    <span class="new__price">98.04</span>
+                                </div>
+                                <div class="home__product__action">
+                                    <button>Buy Now!</button>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="shop.html">
+                            <div class="home__product">
+                                <img src="img/product-2.png">
+                                <div class="home__product__description">
+                                    <p>10W wireless Charging Pad</p>
+                                    <span class="old__price">103.20</span>
+                                    <span class="new__price">98.04</span>
+                                </div>
+                                <div class="home__product__action">
+                                    <button>Buy Now!</button>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="shop.html">
+                            <div class="home__product">
+                                <img src="img/product-3.png">
+                                <div class="home__product__description">
+                                    <p>Fast wireless Charging Pad</p>
+                                    <span class="old__price">103.20</span>
+                                    <span class="new__price">98.04</span>
+                                </div>
+                                <div class="home__product__action">
+                                    <button>Buy Now!</button>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="shop.html">
+                            <div class="home__product">
+                                <img src="img/product-4.png">
+                                <div class="home__product__description">
+                                    <p>Power Wave 10 Dual Pad</p>
+                                    <span class="old__price">103.20</span>
+                                    <span class="new__price">98.04</span>
+                                </div>
+                                <div class="home__product__action">
+                                    <button>Buy Now!</button>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+
                     <div class="home__products__row">
 
                         <a href="shop.html">
@@ -300,7 +373,7 @@
                 <div class="home__banner__inner">
                     <h1>No Waiting, Order right now!</h1>
                     <p>And get 10% off of your first puchase</p>
-                    <button>Shopping Now</button>
+                    <button id="to__products__arrow">Shopping Now</button>
                 </div>
             </div>
         </div>
@@ -322,6 +395,7 @@
                                     <li><a href="home.html">Home</a></li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="https://github.com/gk44739/Inxhinjeri-E-Ueb-it-Projekti.git">Git Repository</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -341,7 +415,7 @@
                 </div>
             </div>
             <div class="footer__copyright">
-                <p>&copy; 2020 <span>Logo.</span> All rights reserved</p>
+                <p>&copy; 2020 <span><a href="home.html">E Shop.</a></span> All rights reserved</p>
             </div>
         </footer>
         <script src="js/main.js"></script>

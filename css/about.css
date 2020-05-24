@@ -1,7 +1,6 @@
 .about__main {
   background-color: #e5e6e8;
 }
-
 .about__main__inner {
   background-color: #e5e6e8;
   text-align: center;
@@ -11,19 +10,16 @@
 .about__main__inner p {
   margin:20px 0;
 }
-
 .about__main__how {
   background-color: white;
   display: flex;
   flex-direction: row;
   margin: 50px 0;
 }
-
 .about__main__how__inner {
   display: flex;
   flex-direction: row;
 }
-
 .main2__photo {
   width: 100%;
   height: 100%;
@@ -37,7 +33,6 @@
   flex-direction: column;
   justify-content: center;
 }
-
 .about__main__how__inner p {
   width: 0 auto;
 }
@@ -52,7 +47,6 @@
   text-align: center;
   padding-top: 20px;
 }
-
 .human {
   text-align: center;
   margin: 100px 0;
@@ -70,21 +64,3 @@
   margin-bottom: 20px;
 }
 
-.footer__links__information {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer__links__information p {
-  margin-top: 30px;
-  flex-direction: column;
-  font-size: larger;
-  color: #7c7c7c;
-}
-
-.footer__links__quick p {
-  margin-top: 30px;
-  flex-direction: column;
-  font-size: larger;
-  color: #7c7c7c;
-}
