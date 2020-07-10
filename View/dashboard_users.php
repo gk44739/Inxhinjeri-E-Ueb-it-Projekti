@@ -24,10 +24,10 @@
         </div>
         <nav>
             <ul>
-                <li><a href="dashboard_home.html">Add Product</a></li>
-                <li><a href="about.html">View Products</a></li>
-                <li><a href="dashboard_users.html">Users</a></li>
-                <li><a href="contact.html">Messages</a></li>
+                <li><a href="dashboard_home.php">Add Product</a></li>
+                <li><a href="about.php">View Products</a></li>
+                <li><a href="dashboard_users.php">Users</a></li>
+                <li><a href="contact.php">Messages</a></li>
             </ul>
         </nav>
     </header>
