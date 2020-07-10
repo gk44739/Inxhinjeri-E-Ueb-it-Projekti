@@ -1,10 +1,16 @@
 header{
-    width: 250px;
-    height: 100vh;
+    min-width: 300px;
+    min-height: 100vh;
     background-color: #3794bc;
     text-align: center;
     position: relative;
 }
+body{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
 .logo__box{
     padding: 30px 0;
 }
@@ -33,4 +39,71 @@ nav ul li{
 nav ul li a{
     color: #ffffff;
     text-decoration: none;
+}
+.photos__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.upload_form{
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+}
+.upload_form h1{
+    text-align: center;
+    margin-top: 40px;
+}
+.upload_form form{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 80px 0 20px 0;
+}
+.upload_form form input{
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+}
+.file__chooser{
+    position: relative;
+}
+.file__chooser label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    width: 88px;
+    height: 30px;
+    background-color: #3794bc;
+    color: #ffffff;
+    cursor: pointer;
+}
+.upload_form form input[type="file"]{
+    outline: none;
+    text-align: right;
+    color: #3d3d3d;
+    padding-left: 20px;
+    padding: 5px 0;
+    margin: 0;
+}
+.upload_form form textarea{
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+}
+.upload_form form input[type="submit"]{
+    background-color: #3794bc;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
 }

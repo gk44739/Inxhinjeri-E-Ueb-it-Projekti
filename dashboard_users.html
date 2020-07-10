@@ -14,6 +14,7 @@
     <!-- FAVICON -->
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/css/dashboard_home.css">
+    <link rel="stylesheet" href="/css/dashboard_users.css">
 </head>
 <body>
     <header>
@@ -30,40 +31,26 @@
             </ul>
         </nav>
     </header>
-
-    <div class="upload_form">
-        <h1>Add Product</h1>
-        <form action="">
-            <input type="text" placeholder="Name">
-            <br>
-            <input type="text" placeholder="Price">
-
-            <div class="photos__row">
-                <div class="file__chooser">
-                    <label for="main__photo">Main Photo</label>
-                    <input type="file" id="main__photo">
-                </div>
-
-                <div class="file__chooser">
-                    <label for="photo__1">Photo 1</label>
-                    <input type="file" id="photo__1">
-                </div>
+    
+    <div class="users__form">
+        <h1>Users</h1>
+        <div class="users__form__inner">
+            <div class="users__table">
+                
             </div>
-
-            <div class="photos__row">
-                <div class="file__chooser">
-                    <label for="photo__2">Photo 2</label>
-                    <input type="file" id="photo__2">
-                </div>
-
-                <div class="file__chooser">
-                    <label for="photo__3">Photo 3</label>
-                    <input type="file" id="photo__3">
-                </div>
+            <div class="user__form__inputs">
+                <form action="">
+                    
+                    <input type="text" placeholder="Username">
+                    <br>
+                    <input type="email" placeholder="Email">
+                    <br>
+                    <input type="password" placeholder="Password">
+                    <br>
+                    <input type="submit" value="Save">
+                </form>
             </div>
-            <textarea name="" placeholder="Description"></textarea>
-            <input type="submit" value="Publish">
-        </form>
+        </div>
     </div>
 </body>
 </html>

@@ -1,0 +1,40 @@
+.users__form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    overflow: auto;
+}
+.users__form h1{
+    margin: 40px 0;
+    text-align: center;
+}
+.users__form__inner{
+    display: flex;
+    flex-direction: row;
+}
+.users__table{
+    width: 60%;
+    text-align: center;
+}
+.user__form__inputs{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:100px 0;
+}
+.user__form__inputs form{
+    width: 340px;
+}
+.user__form__inputs form input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 5px;
+}
+.user__form__inputs form input[type="submit"]{
+    background:#3794bc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
