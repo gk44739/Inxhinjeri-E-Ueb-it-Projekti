@@ -22,31 +22,31 @@
             <div class="login__form">
                 <h1>Login</h1>
                 <form action="">
-                    <input type="text" name="username" placeholder="Username" id="username">
+                    <input type="text" name="username_login" placeholder="Username" id="username">
                     <br>
-                    <input type="password" name="password" placeholder="Password" id="pass">
+                    <input type="password" name="password_login" placeholder="Password" id="pass">
                     <p><a href="#">Forgot your password ?</a></p>
-                    <button onclick="kycu()">LOG IN</button>
+                    <button onclick="kycu()" >LOG IN</button>
                 </form>
             </div>
 
             <div class="signup__form">
                 <h1>Sign Up</h1>
-                <form action="">
-                    <input type="text" name="username" placeholder="Username" id="userReg">
+                <form action="../Controller/user_register.php" method="POST">
+                    <input type="text" name="username_register" placeholder="Username" id="userReg">
                     <br>
-                    <input type="email" name="email" placeholder="Email" id="email">
+                    <input type="email" name="email_register" placeholder="Email" id="email">
                     <br>
-                    <input type="password" name="password" placeholder="Password" id="passReg">
+                    <input type="password" name="password_register" placeholder="Password" id="passReg">
                     <br>
                     <input type="password" name="confirmpassword" placeholder="Confirm Password" id="passConReg">
-                    <button onclick="regjistrohu()">SIGN UP</button>
+                    <button onclick="regjistrohu()" name="sign__up__clicked">SIGN UP</button>
                 </form>
             </div>
 
             <div class="login__description">
                 <h1>Welcome to the Logo.</h1>
-                <p>Welcome to our elecrtonic shop if you are not a member please sign up by clicking the button below or go to the <a href="home.html">Shop.</a></p>
+                <p>Welcome to our elecrtonic shop if you are not a member please sign up by clicking the button below or go to the <a href="home.php">Shop.</a></p>
                 <button id="signup__rid">SIGN UP</button>
             </div>
                     
