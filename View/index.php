@@ -52,7 +52,7 @@
                     
             <div class="signup__description">
                 <h1>Welcome to the Logo.</h1>
-                <p>If you have an account you can log in or go shopping right away <a href="home.html">Shop.</a></p>
+                <p>If you have an account you can log in or go shopping right away <a href="home.php">Shop.</a></p>
                 <button id="login__rid">LOG IN</button>
             </div>
 

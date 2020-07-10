@@ -30,7 +30,7 @@
                 <div class="container">
                     <div class="header__main__inner">
                         <!-- <a href="#"><img src="#"></a> -->
-                        <a href="home.html" class="logo"><span>E</span> Shop.</a>
+                        <a href="home.php" class="logo"><span>E</span> Shop.</a>
                         <form>
                             <input type="text" name="search" placeholder="Search...">
                             <button><i class="fas fa-search"></i></button>
@@ -49,9 +49,9 @@
                 <div class="container">
                     <div class="header__bar__inner">
                         <ul>
-                            <li><a href="home.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="home.php">Home</a></li>
+                            <li><a href="about.php">About</a></li>
+                            <li><a href="contact.php">Contact</a></li>
                         </ul>
                     </div>
                 </div>

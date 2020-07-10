@@ -12,15 +12,15 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- FAVICON -->
-    <link rel="stylesheet" href="/css/default.css">
-    <link rel="stylesheet" href="/css/dashboard_home.css">
-    <link rel="stylesheet" href="/css/dashboard_users.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/dashboard_home.css">
+    <link rel="stylesheet" href="css/dashboard_users.css">
 </head>
 <body>
     <header>
         <!-- <a href="#"><img src="#"></a> -->
         <div class="logo__box">
-            <a href="home.html" class="logo"><span>E</span> Shop.</a>
+            <a href="home.php" class="logo"><span>E</span> Shop.</a>
         </div>
         <nav>
             <ul>
