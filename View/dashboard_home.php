@@ -28,17 +28,18 @@
                 ?>
                 <div class="wellcome__logout">
                     <p>Welcome <?php echo $username; ?></p>
-                    <p><a href="../Controller/logout.php"><button>Log Out</button></a></p>
+                    <p><a href="../Controller/user_logout.php"><button>Log Out</button></a></p>
                 </div> 
                 <?php
             }
         ?> 
         <nav>
             <ul>
+                <li><a href="home.php">Website</a></li>
                 <li><a href="dashboard_home.php">Add Product</a></li>
-                <li><a href="about.html">View Products</a></li>
+                <li><a href="about.php">View Products</a></li>
                 <li><a href="dashboard_users.php">Users</a></li>
-                <li><a href="contact.html">Messages</a></li>
+                <li><a href="contact.php">Messages</a></li>
             </ul>
         </nav>
     </header>

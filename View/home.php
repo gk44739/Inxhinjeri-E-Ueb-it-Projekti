@@ -26,8 +26,8 @@
                             if(isset($_SESSION['login'])){
                                 $username=$_SESSION['username'];
                                 ?>
-                                <p>Welcome <?php echo $username; ?></p>
-                                <p><a href="../Controller/logout.php">Log Out</a></p> 
+                                <p>Welcome <?php echo $username;?></p>
+                                <p><a href="../Controller/user_logout.php">Log Out</a></p> 
                                 <?php
                             }else{
                                 ?>
@@ -63,7 +63,18 @@
                 <div class="container">
                     <div class="header__bar__inner">
                         <ul>
+                            <?php
+                                if(isset($_SESSION['login'])){
+                                    $role=$_SESSION['role'];
+                                    if($role==0){
+                                        ?>
+                                        <li><a href="dashboard_home.php">Dashboard</a></li>
+                                        <?php
+                                    }
+                                }
+                            ?>
                             <li><a href="home.php">Home</a></li>
+                            <li><a href="shop.php">Shop</a></li>
                             <li><a href="about.php">About</a></li>
                             <li><a href="contact.php">Contact</a></li>
                         </ul>
@@ -205,156 +216,23 @@
                                 $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
                                 while($row=$result->fetch_array()){
                                     ?>
-                                    <a href="shop.php">
-
-                                        <div class="home__product">
+                                    <div class="home__product">
+                                        <a href="product.php">
                                             <img src="img/<?php echo $row['foto']; ?>">
                                             <div class="home__product__description">
                                                 <p><?php echo $row['titulli']; ?></p>
                                                 <span class="new__price"><?php echo $row['cmimi']; ?></span>
                                             </div>
-
                                             <div class="home__product__action">
-                                                <button>Buy Now!</button>
+                                                <a href="product.php"><button>Buy Now!</button></a>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                     <?php
                                 }
                             ?>
-
-                        <!-- <a href="shop.html">
-                            <div class="home__product">
-                                <img src="img/product-4.png">
-                                <div class="home__product__description">
-                                    <p>Power Wave 10 Dual Pad</p>
-                                    <span class="old__price">103.20</span>
-                                    <span class="new__price">98.04</span>
-                                </div>
-                                <div class="home__product__action">
-                                    <button>Buy Now!</button>
-                                </div>
-                            </div>
-                        </a>
-
-                    
-
-                        <a href="shop.html">
-                            <div class="home__product">
-                                <img src="img/product-1.png">
-                                <div class="home__product__description">
-                                    <p>PowerWave wireless Charge</p>
-                                    <span class="old__price">103.20</span>
-                                    <span class="new__price">98.04</span>
-                                </div>
-                                <div class="home__product__action">
-                                    <button>Buy Now!</button>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="shop.html">
-                            <div class="home__product">
-                                <img src="img/product-2.png">
-                                <div class="home__product__description">
-                                    <p>10W wireless Charging Pad</p>
-                                    <span class="old__price">103.20</span>
-                                    <span class="new__price">98.04</span>
-                                </div>
-                                <div class="home__product__action">
-                                    <button>Buy Now!</button>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="shop.html">
-                            <div class="home__product">
-                                <img src="img/product-3.png">
-                                <div class="home__product__description">
-                                    <p>Fast wireless Charging Pad</p>
-                                    <span class="old__price">103.20</span>
-                                    <span class="new__price">98.04</span>
-                                </div>
-                                <div class="home__product__action">
-                                    <button>Buy Now!</button>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="shop.html">
-                            <div class="home__product">
-                                <img src="img/product-4.png">
-                                <div class="home__product__description">
-                                    <p>Power Wave 10 Dual Pad</p>
-                                    <span class="old__price">103.20</span>
-                                    <span class="new__price">98.04</span>
-                                </div>
-                                <div class="home__product__action">
-                                    <button>Buy Now!</button>
-                                </div>
-                            </div>
-                        </a>
-
-                    
-
-                        <a href="shop.html">
-                            <div class="home__product">
-                                <img src="img/product-1.png">
-                                <div class="home__product__description">
-                                    <p>PowerWave wireless Charge</p>
-                                    <span class="old__price">103.20</span>
-                                    <span class="new__price">98.04</span>
-                                </div>
-                                <div class="home__product__action">
-                                    <button>Buy Now!</button>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="shop.html">
-                            <div class="home__product">
-                                <img src="img/product-2.png">
-                                <div class="home__product__description">
-                                    <p>10W wireless Charging Pad</p>
-                                    <span class="old__price">103.20</span>
-                                    <span class="new__price">98.04</span>
-                                </div>
-                                <div class="home__product__action">
-                                    <button>Buy Now!</button>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="shop.html">
-                            <div class="home__product">
-                                <img src="img/product-3.png">
-                                <div class="home__product__description">
-                                    <p>Fast wireless Charging Pad</p>
-                                    <span class="old__price">103.20</span>
-                                    <span class="new__price">98.04</span>
-                                </div>
-                                <div class="home__product__action">
-                                    <button>Buy Now!</button>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="shop.html">
-                            <div class="home__product">
-                                <img src="img/product-4.png">
-                                <div class="home__product__description">
-                                    <p>Power Wave 10 Dual Pad</p>
-                                    <span class="old__price">103.20</span>
-                                    <span class="new__price">98.04</span>
-                                </div>
-                                <div class="home__product__action">
-                                    <button>Buy Now!</button>
-                                </div>
-                            </div>
-                        </a> -->
-
                     </div>
-
+                    <a href="shop.php"><button>See All</button></a>
                 </div>
             </div>
         </div>

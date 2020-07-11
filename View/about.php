@@ -26,7 +26,7 @@
                                 $username=$_SESSION['username'];
                                 ?>
                                 <p>Welcome <?php echo $username; ?></p>
-                                <p><a href="../Controller/logout.php">Log Out</a></p> 
+                                <p><a href="../Controller/user_logout.php">Log Out</a></p> 
                                 <?php
                             }else{
                                 ?>
@@ -63,7 +63,18 @@
                 <div class="container">
                     <div class="header__bar__inner">
                         <ul>
+                            <?php
+                                if(isset($_SESSION['login'])){
+                                    $role=$_SESSION['role'];
+                                    if($role==0){
+                                        ?>
+                                        <li><a href="dashboard_home.php">Dashboard</a></li>
+                                        <?php
+                                    }
+                                }
+                            ?>
                             <li><a href="home.php">Home</a></li>
+                            <li><a href="shop.php">Shop</a></li>
                             <li><a href="about.php">About</a></li>
                             <li><a href="contact.php">Contact</a></li>
                         </ul>

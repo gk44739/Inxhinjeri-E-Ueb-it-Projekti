@@ -29,7 +29,7 @@
                 ?>
                 <div class="wellcome__logout">
                     <p>Welcome <?php echo $username; ?></p>
-                    <p><a href="../Controller/logout.php"><button>Log Out</button></a></p>
+                    <p><a href="../Controller/user_logout.php"><button>Log Out</button></a></p>
                 </div>
                 <?php
             }
@@ -59,6 +59,10 @@
                     <br>
                     <input type="password" placeholder="Password">
                     <br>
+                    <select name="role" >
+                        <option value="0">Administrator</option>
+                        <option value="1">User</option>
+                    </select>
                     <input type="submit" value="Save">
                 </form>
             </div>

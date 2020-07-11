@@ -10,7 +10,7 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <!-- FAVICON -->
-        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/product.css">
         <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="css/fontawesome.css">
         <link rel="stylesheet" href="css/default.css">
@@ -44,7 +44,7 @@
                 <div class="container">
                     <div class="header__main__inner">
                         <!-- <a href="#"><img src="#"></a> -->
-                        <a href="home.php" class="logo"><span>E</span> Shop.</a>
+                        <a href="home.html" class="logo"><span>E</span> Shop.</a>
                         <form>
                             <input type="text" name="search" placeholder="Search...">
                             <button><i class="fas fa-search"></i></button>
@@ -84,68 +84,57 @@
         </header>
 
         <main>
-            <div class="contact__tittle__banner">
+            <div class="shop__tittle__banner">
                 <div class="container">
-                    <div class="contact__tittle__banner__inner">
-                        <h1>Contact Us</h1>
-                        <p>Home / Contact Us</p>
+                    <div class="shop__tittle__banner__inner">
+                        <h1>PowerWave Wireless Charge</h1>
+                        <p>Home / Product</p>
                     </div>
                 </div>
             </div>
-            <div class="conatact__main">
+
+            <div class="shop__product">
                 <div class="container">
-
-                    <div class="conatact__main__inner">
-
-                        <div class="info">
-                            <div class="store_information">
-                                <h3><i class="fas fa-map-marker-alt"></i> Store Information</h3>
-                                <p>Single</p>
-                                <p>France</p>
-                            </div>
-                            <div class="email_contact">
-                                <h3><i class="fas fa-envelope"></i> Email Contact</h3>
-                                Email Us: admin@admin.com
-                            </div>
-                        </div>
-
-                        <div class="contact_form_contaier">
-                            <h1>Contact Form</h1>
-                            <form action="">
-                                <div class="form_item">
-                                    <label for="subject">Subject</label>
-                                    <select id="subject">
-                                        <option selected="selected" value="">Customer Sevice</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                      </select>
+                    <div class="shop__product__inner">
+                        <div class="shop__product__text">
+                            <div class="shop__product__tittle">
+                                <h1>PowerWave Wireless Charge</h1>
+                                <div class="shop__product__price">
+                                    <span class="old__price">103.20</span>
+                                    <span class="price">98.04</span>
                                 </div>
-                                <div class="form_item">
-                                    <label for="email">Email</label>
-                                    <input name="email" class="custom-file-input" placeholder="Your@email.com" type="email">
-                                </div>
-                                <div class="form_item attc">
-                                    <span>Attachment</span>
-                                    <div class="form_item_inner">                                    
-                                        <label class="fileContainer">
-                                            <i class="fas fa-folder-open"></i> Choose File <input type="file"/>
-                                        </label>
-                                        <span class="optional"> Optional</span>
+                            </div>
+                            <p class="text__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam et, aliquid eveniet nisi hic illum, est vel porro repudiandae assumenda repellendus natus veritatis laboriosam minima.</p>
+                            <form>
+                                <label for="quantity">Quantity :</label>
+                                <div class="costum__input">
+                                    <input type="number" value="1">
+                                    <div id="plus">
+                                        <span></span>
+                                        <span></span>
                                     </div>
+                                    <div id="minus"><span></span></div>
                                 </div>
-
-                                <div class="message_item">
-                                    <label for="file">Message</label>
-                                    <textarea placeholder="How can we help?"></textarea>
-                                </div>
-                                <button class="submit_button" type="submit">Send</button>
-
+                                <button>Buy Now</button>
                             </form>
+                            <p>Availability : In Stock</p>
+                            <p>Shipping Tax : Free</p>
                         </div>
-                        
-                    </div>
 
+                        <div class="shop__product__photos">
+                            <div class="shop__product__img">
+                                <img src="img/product-1.png">
+                            </div>
+                            <div class="shop__product__img__nav">
+                                <ul class="shop__thumbnails">
+                                    <li class="shop__thumbnails__li active"><img src="img/product-1.png"></li>
+                                    <li class="shop__thumbnails__li"><img src="img/product-2.png"></li>
+                                    <li class="shop__thumbnails__li"><img src="img/product-3.png"></li>
+                                    <li class="shop__thumbnails__li"><img src="img/product-4.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

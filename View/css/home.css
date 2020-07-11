@@ -108,7 +108,7 @@ a.logo{
 }
 .header__bar__inner ul li{
     display:inline-block;
-    padding-right: 35px;
+    padding-left: 35px;
 }
 .header__bar__inner ul li a{
     text-decoration: none;
@@ -342,33 +342,54 @@ a.logo{
 .home__products__inner{
     text-align: center;
     padding: 50px 0;
+
 }
 .home__products__inner h1{
     font-size: 50px;
     margin: 0 0 65px 0;
+}
+.home__products__inner a button{
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 15px 40px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #3794bc;
+    border: 1px solid transparent;
+    transition: ease-in-out .3s;
+}
+.home__products__inner a button:hover {
+    border: 1px solid #3794bc;
+    color: #3794bc;
+    background-color: #fff;
 }
 .home__products__row{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-bottom: 30px;
 }
-.home__products__row a{
-    width: 25%;
-    margin:15px 15px 85px;
+.home__product a{
     color: #000;
-    text-align: center;
     text-decoration: none;
+}
+.home__products__row .home__product{
+    width: 20%;
+    margin:15px 15px 85px;
+    text-align: center;
     transition: transform .3s;
 }
-.home__products__row a:hover
+.home__products__row .home__product:hover
 .home__product__action{
     display: block;
 }
-.home__products__row a:hover{
+.home__products__row .home__product:hover{
     cursor: pointer;
     text-decoration: none;
-    
     transform: scale(1.05);
     box-shadow: 0 0 5px 2px rgba(0,0,0,0.12);
     margin: 15px;
@@ -409,15 +430,19 @@ a.logo{
     font-size: 20px;
     display: none;
 }
-.home__product__action button{
+
+.home__product__action a button{
     color: #fff;
     background-color: #3794bc;
     border: none;
+    border-radius: 0px;
+    font-size:16px;
+    font-weight: normal;
     outline: none;
     cursor: pointer;
     padding: 10px 30px;
 }
-.home__product__action button:hover{
+.home__product__action a button:hover{
     background-color: #fff;
     color: #3794bc;
     border: 1px solid #3794bc;

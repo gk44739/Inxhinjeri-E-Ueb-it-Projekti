@@ -29,6 +29,7 @@ function login($username, $password){
         $_SESSION['login'] = true;  
         $_SESSION['id'] = $data['id']; 
         $_SESSION['username']= $data['username'];
+        $_SESSION['role']= $data['roli'];
         return true;  
     } else {  
         return false;
