@@ -35,8 +35,7 @@
                                    <p><a href="index.php">Sign Up / Sign In</a></p>
                                 <?php
                             }
-                        ?>   
-                                       
+                        ?>                     
                     </div>
                 </div>
             </div>

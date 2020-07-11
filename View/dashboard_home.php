@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Dashboard Home</title>
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -26,22 +26,21 @@
             if(isset($_SESSION['login'])){
                 $username=$_SESSION['username'];
                 ?>
-                <p>Welcome <?php echo $username; ?></p>
-                
-                <nav>
-                    <ul>
-                        <li><a href="dashboard_home.php">Add Product</a></li>
-                        <li><a href="about.html">View Products</a></li>
-                        <li><a href="dashboard_users.php">Users</a></li>
-                        <li><a href="contact.html">Messages</a></li>
-                    </ul>
-                </nav>
-
-                <p><a href="../Controller/logout.php">Log Out</a></p> 
+                <div class="wellcome__logout">
+                    <p>Welcome <?php echo $username; ?></p>
+                    <p><a href="../Controller/logout.php"><button>Log Out</button></a></p>
+                </div> 
                 <?php
             }
         ?> 
-        
+        <nav>
+            <ul>
+                <li><a href="dashboard_home.php">Add Product</a></li>
+                <li><a href="about.html">View Products</a></li>
+                <li><a href="dashboard_users.php">Users</a></li>
+                <li><a href="contact.html">Messages</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="upload_form">
