@@ -21,21 +21,22 @@
             <div class="header__top">
                 <div class="container">
                     <div class="header__top__inner">
-                          
                         <?php
                             session_start();
-                            if($_SESSION['login']){
+                            if(isset($_SESSION['login'])){
                                 $username=$_SESSION['username'];
                                 ?>
-                                <p>Welcome <?php echo $username ?> !</p>
+                                <p>Welcome <?php echo $username; ?></p>
+                                <p><a href="../Controller/logout.php">Log Out</a></p> 
                                 <?php
                             }else{
                                 ?>
                                    <p>Welcome to Our Store !</p>
+                                   <p><a href="index.php">Sign Up / Sign In</a></p>
                                 <?php
                             }
                         ?>   
-                        <p><a href="../Controller/logout.php">Log Out</a></p>                
+                                       
                     </div>
                 </div>
             </div>

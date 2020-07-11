@@ -20,8 +20,22 @@
             <div class="header__top">
                 <div class="container">
                     <div class="header__top__inner">
-                        <p>Welcome to Our Store !</p>
-                        <p><a href="index.html">Sing In / Log In</a></p>
+                        <?php
+                            session_start();
+                            if(isset($_SESSION['login'])){
+                                $username=$_SESSION['username'];
+                                ?>
+                                <p>Welcome <?php echo $username; ?></p>
+                                <p><a href="../Controller/logout.php">Log Out</a></p> 
+                                <?php
+                            }else{
+                                ?>
+                                   <p>Welcome to Our Store !</p>
+                                   <p><a href="index.php">Sign Up / Sign In</a></p>
+                                <?php
+                            }
+                        ?>   
+                                       
                     </div>
                 </div>
             </div>

@@ -2,5 +2,5 @@
     require('../Model/user_repository.php');
     session_start();
     logout();
-    header('../View/home.php');
+    header('location:../View/home.php');
 ?>

@@ -21,14 +21,27 @@
         <div class="logo__box">
             <a href="dashboard_home.php" class="logo"><span>E</span> Shop.</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="dashboard_home.php">Add Product</a></li>
-                <li><a href="about.html">View Products</a></li>
-                <li><a href="dashboard_users.php">Users</a></li>
-                <li><a href="contact.html">Messages</a></li>
-            </ul>
-        </nav>
+        <?php
+            session_start();
+            if(isset($_SESSION['login'])){
+                $username=$_SESSION['username'];
+                ?>
+                <p>Welcome <?php echo $username; ?></p>
+                
+                <nav>
+                    <ul>
+                        <li><a href="dashboard_home.php">Add Product</a></li>
+                        <li><a href="about.html">View Products</a></li>
+                        <li><a href="dashboard_users.php">Users</a></li>
+                        <li><a href="contact.html">Messages</a></li>
+                    </ul>
+                </nav>
+
+                <p><a href="../Controller/logout.php">Log Out</a></p> 
+                <?php
+            }
+        ?> 
+        
     </header>
 
     <div class="upload_form">
