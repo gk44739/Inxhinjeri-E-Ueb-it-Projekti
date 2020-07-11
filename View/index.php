@@ -26,13 +26,13 @@
                     <br>
                     <input type="password" name="password_login" placeholder="Password" id="pass">
                     <p><a href="#">Forgot your password ?</a></p>
-                    <button onclick="" >LOG IN</button>
+                    <button>LOG IN</button>
                 </form>
             </div>
 
             <div class="signup__form">
                 <h1>Sign Up</h1>
-                <form action="../Controller/user_register.php" method="POST">
+                <form action="../Controller/user_register.php" method="POST" onsubmit="return regjistrohu()">
                     <input type="text" name="username_register" placeholder="Username" id="userReg">
                     <br>
                     <input type="email" name="email_register" placeholder="Email" id="email">
@@ -40,7 +40,7 @@
                     <input type="password" name="password_register" placeholder="Password" id="passReg">
                     <br>
                     <input type="password" name="confirmpassword" placeholder="Confirm Password" id="passConReg">
-                    <button onclick="regjistrohu()" name="sign__up__clicked">SIGN UP</button>
+                    <button name="sign__up__clicked">SIGN UP</button>
                 </form>
             </div>
 

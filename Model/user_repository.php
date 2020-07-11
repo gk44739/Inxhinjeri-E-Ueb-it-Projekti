@@ -17,15 +17,18 @@ function register(User $user){
         return false;  
     }
 }
+
 function login($username, $password){
     global $connection;
+    session_start();
     $pass = md5($password);
     $check = mysqli_query($connection,"Select * from user where username='$username' and password='$pass'");  
     $data = mysqli_fetch_array($check);  
     $result = mysqli_num_rows($check);  
     if ($result == 1) {  
         $_SESSION['login'] = true;  
-        $_SESSION['id'] = $data['id'];  
+        $_SESSION['id'] = $data['id']; 
+        $_SESSION['username']= $data['username'];
         return true;  
     } else {  
         return false;

@@ -25,9 +25,16 @@ a.logo{
 .logo span{
     color: #3794bc;
 }
+.header__top__inner p{
+    font-size: 20px;
+    cursor: pointer;
+}
 .header__top__inner p a{
     color: #000;
     text-decoration: none;
+}
+.header__top__inner p i{
+    margin-left: 10px;
 }
 .header__main__inner{
     display: flex;
@@ -343,7 +350,8 @@ a.logo{
 .home__products__row{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .home__products__row a{
     width: 25%;
