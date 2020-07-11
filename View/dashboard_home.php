@@ -19,7 +19,7 @@
     <header>
         <!-- <a href="#"><img src="#"></a> -->
         <div class="logo__box">
-            <a href="home.php" class="logo"><span>E</span> Shop.</a>
+            <a href="dashboard_home.php" class="logo"><span>E</span> Shop.</a>
         </div>
         <nav>
             <ul>

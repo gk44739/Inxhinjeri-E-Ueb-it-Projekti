@@ -20,7 +20,7 @@ function register(User $user){
 function login($username, $password){
     global $connection;
     $pass = md5($password);
-    $check = mysqli_query($connection,"Select * from users where username='$username' and password='$pass'");  
+    $check = mysqli_query($connection,"Select * from user where username='$username' and password='$pass'");  
     $data = mysqli_fetch_array($check);  
     $result = mysqli_num_rows($check);  
     if ($result == 1) {  
@@ -30,6 +30,13 @@ function login($username, $password){
     } else {  
         return false;
     } 
+}
+
+function isAdmin($username){
+    global $connection;
+    $check = mysqli_query($connection,"Select roli from user where username='$username'");  
+    $data = mysqli_fetch_array($check);  
+    return $data['roli'];
 }
 
 function session() {  

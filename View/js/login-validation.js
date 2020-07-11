@@ -8,12 +8,7 @@ function kycu() {
 
   if (user.trim() == "" || pass.trim() == "") {
     alert("Please type your username or password");
-  } else {
-    if (user == username && pass == password) {
-      window.location.href = "home.html";
-    } else {
-      alert("Username or Password wrong");
-    }
+    return false;
   }
 }
 

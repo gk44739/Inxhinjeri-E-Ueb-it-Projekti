@@ -21,8 +21,7 @@
             <div class="header__top">
                 <div class="container">
                     <div class="header__top__inner">
-                        <p>Welcome to Our Store !</p>
-                        <p><a href="index.php">Sing In / Log In</a></p>
+                        <p>Welcome to Our Store !</p>                     
                     </div>
                 </div>
             </div>

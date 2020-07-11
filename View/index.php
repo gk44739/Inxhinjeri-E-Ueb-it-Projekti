@@ -21,12 +21,12 @@
 
             <div class="login__form">
                 <h1>Login</h1>
-                <form action="">
+                <form action="../Controller/user_login.php" method="POST" onsubmit="return kycu()">
                     <input type="text" name="username_login" placeholder="Username" id="username">
                     <br>
                     <input type="password" name="password_login" placeholder="Password" id="pass">
                     <p><a href="#">Forgot your password ?</a></p>
-                    <button onclick="kycu()" >LOG IN</button>
+                    <button onclick="" >LOG IN</button>
                 </form>
             </div>
 
