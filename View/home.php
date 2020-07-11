@@ -187,7 +187,7 @@
                         <div class="home__featured__product__text">
                             <p>Welcome to the wireless world</p>
                             <h1>Qi Certified Chargers</h1>
-                            <a href="shop.html"><button>Buy it now <i class="fas fa-chevron-right"></i></button></a>
+                            <a href="shop.php"><button>Buy it now <i class="fas fa-chevron-right"></i></button></a>
                         </div>
                     </div>
 
@@ -196,7 +196,7 @@
                         <div class="home__featured__product__text">
                             <p>Welcome to the wireless world</p>
                             <h1>Lost The Cable<br>Keep the Charge</h1>
-                            <a href="shop.html"><button>Buy it now <i class="fas fa-chevron-right"></i></button></a>
+                            <a href="shop.php"><button>Buy it now <i class="fas fa-chevron-right"></i></button></a>
                         </div>
                     </div>
                     
