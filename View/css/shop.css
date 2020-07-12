@@ -53,7 +53,8 @@
 }
 .shop__product img{
     width: 100%;
-    object-fit: cover;
+    height: 310px;
+    object-fit: contain;
 }
 .shop__product__description{
     padding: 20px 0;

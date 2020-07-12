@@ -46,36 +46,36 @@
 
     <div class="upload_form">
         <h1>Add Product</h1>
-        <form action="">
-            <input type="text" placeholder="Name">
+        <form action="../Controller/admin_product.php" method="POST" enctype="multipart/form-data">
+            <input type="text" placeholder="Name" name="title">
             <br>
-            <input type="text" placeholder="Price">
+            <input type="text" placeholder="Price" name="price">
 
             <div class="photos__row">
                 <div class="file__chooser">
                     <label for="main__photo">Main Photo</label>
-                    <input type="file" id="main__photo">
+                    <input type="file" id="main__photo" name="main_photo">
                 </div>
 
                 <div class="file__chooser">
-                    <label for="photo__1">Photo 1</label>
-                    <input type="file" id="photo__1">
+                    <label for="photo__1">Featured Photo</label>
+                    <input type="file" id="photo__1" name="photo_1">
                 </div>
             </div>
 
             <div class="photos__row">
                 <div class="file__chooser">
                     <label for="photo__2">Photo 2</label>
-                    <input type="file" id="photo__2">
+                    <input type="file" id="photo__2"  name="photo_2">
                 </div>
 
                 <div class="file__chooser">
                     <label for="photo__3">Photo 3</label>
-                    <input type="file" id="photo__3">
+                    <input type="file" id="photo__3"  name="photo_3">
                 </div>
             </div>
-            <textarea name="" placeholder="Description"></textarea>
-            <input type="submit" value="Publish">
+            <textarea name="description" placeholder="Description"></textarea>
+            <input name="create__product" type="submit" value="Publish">
         </form>
     </div>
 </body>

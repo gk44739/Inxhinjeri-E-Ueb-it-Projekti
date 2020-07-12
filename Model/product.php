@@ -1,5 +1,5 @@
 <?php
-require('db_connection.php');
+require('connection_db.php');
 
 class Product{
     private $title;
@@ -11,9 +11,10 @@ class Product{
     private $photo_3;
     private $userID;
 
-    public function __construct($title,$price,$photo_main,$photo_1,$photo_2,$photo_3,$userID){
+    public function __construct($title,$price,$description,$photo_main,$photo_1,$photo_2,$photo_3,$userID){
         $this->title=$title;
         $this->price=$price;
+        $this->description=$description;
         $this->photo_main=$photo_main;
         $this->photo_1=$photo_1;
         $this->photo_2=$photo_2;
@@ -34,6 +35,10 @@ class Product{
 
     public function getPrice(){
         return $this->price;
+    }
+
+    public function getDescription(){
+        return $this->description;
     }
 
     public function getPhoto_main(){
@@ -64,6 +69,10 @@ class Product{
         $this->price=$n;
     }
 
+    public function setDescription($n){
+        $this->description=$n;
+    }
+
     public function setPhoto_main($n){
         $this->photo_main=$n;
     }
@@ -86,7 +95,7 @@ class Product{
     
 
     public function __toString(){
-        return (string)($this->title.' , '.$this->price.' , '.$this->description.');
+        return (string)($this->title.' , '.$this->price.' ,'.$this->description);
     }
 }
 

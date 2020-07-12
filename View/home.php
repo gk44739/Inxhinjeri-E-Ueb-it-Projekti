@@ -182,23 +182,27 @@
             <div class="container">
                 <div class="home__featured__products__inner">
 
-                    <div class="home__featured__product">
-                        <img src="img/featured__product-1.png">
-                        <div class="home__featured__product__text">
-                            <p>Welcome to the wireless world</p>
-                            <h1>Qi Certified Chargers</h1>
-                            <a href="shop.php"><button>Buy it now <i class="fas fa-chevron-right"></i></button></a>
-                        </div>
-                    </div>
-
-                    <div class="home__featured__product">
-                         <img src="img/featured__product-2.png">
-                        <div class="home__featured__product__text">
-                            <p>Welcome to the wireless world</p>
-                            <h1>Lost The Cable<br>Keep the Charge</h1>
-                            <a href="shop.php"><button>Buy it now <i class="fas fa-chevron-right"></i></button></a>
-                        </div>
-                    </div>
+                    <?php
+                        require('../Model/connection_db.php');
+                        global $connection;
+                        $query="SELECT * FROM `product`  ORDER BY `id` desc limit 2" ;
+                        $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+                        while($row=$result->fetch_array()){
+                            ?>
+                            <div class="home__featured__product">
+                                <img src="img/<?php echo $row['photo_1']; ?>">
+                                <div class="home__featured__product__overlay">
+                                <div class="home__featured__product__text">
+                                        <h2>Only <?php echo $row['price']; ?> </h2>
+                                        <h1><?php echo $row['title']; ?></h1>
+                                        
+                                        <a href="shop.php"><button>Buy it now <i class="fas fa-chevron-right"></i></button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    ?>
                     
                 </div>
             </div>
@@ -212,7 +216,7 @@
                             <?php
                                 require('../Model/connection_db.php');
                                 global $connection;
-                                $query="SELECT * FROM `product` limit 9";
+                                $query="SELECT * FROM `product` limit 8";
                                 $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
                                 while($row=$result->fetch_array()){
                                     ?>
