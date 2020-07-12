@@ -101,17 +101,17 @@
                                 <?php
                                     require('../Model/connection_db.php');
                                     global $connection;
-                                    $query="SELECT * FROM `produkti` LIMIT 0,9";
+                                    $query="SELECT * FROM `product` LIMIT 9";
                                     $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
                                     while($row=$result->fetch_array()){
                                         ?>
                                        
                                             <div class="shop__product">
                                                 <a href="product.php">
-                                                    <img src="img/<?php echo $row['foto']; ?>">
+                                                    <img src="img/<?php echo $row['photo_main']; ?>">
                                                     <div class="shop__product__description">
-                                                        <p><?php echo $row['titulli']; ?></p>
-                                                        <span class="new__price"><?php echo $row['cmimi']; ?></span>
+                                                        <p><?php echo $row['title']; ?></p>
+                                                        <span class="new__price"><?php echo $row['price']; ?></span>
                                                     </div>
                                                     <div class="shop__product__action">
                                                         <a href="product.php"><button>Buy Now!</button></a>
