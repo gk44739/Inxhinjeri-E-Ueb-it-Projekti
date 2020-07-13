@@ -138,3 +138,55 @@ nav ul li a{
 .product_table{
     width: 50%;
 }
+.tabelaUser{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+    text-align: left;
+    
+}
+
+th{
+    background-color: #e94c37;
+    color: white;
+    padding: 5px;
+}
+td{
+    padding: 10px;
+    font-family: Arial;
+}
+
+td a{
+    text-decoration: none;
+    background-color: #e2343f;
+    font-size: 13px;
+    padding: 6px;
+    color: white;
+    border-radius: 5px;
+}
+
+td a:nth-child(1){
+    background-color: #41a4c5;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.combobox{
+    margin-top: 20px;
+}
+
+.combobox h4{
+    padding-top: 5px;
+}
+
+.combobox select {
+    margin-top: 10px;
+}
+
+.tabela-forma{
+    overflow: auto;
+    height: 450px;
+    margin-top: 10%;
+}
