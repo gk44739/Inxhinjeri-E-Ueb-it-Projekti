@@ -71,7 +71,7 @@
 
                         if ($result->num_rows > 0){
                             while($row = $result-> fetch_assoc()){
-                                echo "<tr><td>".$row["title"]."</td><td>".$row["price"]."</td><td>".$row["description"]."</td><td>".$row["photo_main"]."</td><td>".$row["photo_1"] ."</td><td>".$row["photo_1"]."</td><td>".$row["photo_2"]."</td><td>".$row["photo_3"]."</td>";
+                                echo "<tr><td>".$row["title"]."</td><td>".$row["price"]."</td><td>".$row["description"]."</td><td>".$row["photo_main"]."</td><td>".$row["photo_1"] ."</td><td>".$row["photo_2"]."</td><td>".$row["photo_3"]."</td>";
                                 ?>
                                 <td>
                                     <a href="dashboard_home.php?edit=<?php echo $row['id']; ?>">Edit</a>

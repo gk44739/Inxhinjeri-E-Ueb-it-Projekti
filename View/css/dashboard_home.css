@@ -75,14 +75,14 @@ nav ul li a{
     height: 100vh;
     overflow-y: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .upload_form h1{
     text-align: center;
     margin-top: 40px;
 }
 .add__product{
-    width: 50%;
+    width: 100%;
 }
 .upload_form .add__product form{
     max-width: 400px;
@@ -136,7 +136,7 @@ nav ul li a{
     cursor: pointer;
 }
 .product_table{
-    width: 50%;
+    width: 100%;
 }
 .tabelaUser{
     border-collapse: collapse;

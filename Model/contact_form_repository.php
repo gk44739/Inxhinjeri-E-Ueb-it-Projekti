@@ -10,7 +10,7 @@ function create(Contact_Form $contact_form){
 
 function delete($subject){
     global $connection;
-    $checknews = mysqli_query($connection, "Select id from users where subject='$subject'");
+    $checknews = mysqli_query($connection, "SELECT id FROM users where subject='$subject'");
     $result = mysqli_num_rows($checknews);
     if($result == 1){
         $query = "DELETE FROM `reports` WHERE subject='subject'";
