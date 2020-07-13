@@ -74,6 +74,7 @@
         $name = $row['title'];
         $price = $row['price'];
         $description = $row['description'];
+        $photo_main = $row['photo_main']['name'];
     }
 
 ?>
