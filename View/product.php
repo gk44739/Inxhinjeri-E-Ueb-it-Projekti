@@ -96,6 +96,17 @@
             <div class="shop__product">
                 <div class="container">
                     <div class="shop__product__inner">
+
+
+                                
+
+
+
+
+
+
+
+
                         <div class="shop__product__text">
                             <div class="shop__product__tittle">
                                 <h1>PowerWave Wireless Charge</h1>

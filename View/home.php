@@ -196,7 +196,7 @@
                                         <h2>Only <?php echo $row['price']; ?> </h2>
                                         <h1><?php echo $row['title']; ?></h1>
                                         
-                                        <a href="shop.php?product=<?php echo $row['id']; ?>"><button>Buy it now <i class="fas fa-chevron-right"></i></button></a>
+                                        <a href="product.php?product=<?php echo $row['id']; ?>"><button>Buy it now <i class="fas fa-chevron-right"></i></button></a>
                                     </div>
                                 </div>
                             </div>
@@ -221,14 +221,14 @@
                                 while($row=$result->fetch_array()){
                                     ?>
                                     <div class="home__product">
-                                        <a href="product.php">
+                                        <a href="product.php?product=<?php echo $row['id']; ?>">
                                             <img src="img/<?php echo $row['photo_main']; ?>">
                                             <div class="home__product__description">
                                                 <p><?php echo $row['title']; ?></p>
                                                 <span class="new__price"><?php echo $row['price']; ?></span>
                                             </div>
                                             <div class="home__product__action">
-                                                <a href="product.php"><button>Buy Now!</button></a>
+                                                <a href="product.php?product=<?php echo $row['id']; ?>"><button>Buy Now!</button></a>
                                             </div>
                                         </a>
                                     </div>
