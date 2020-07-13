@@ -74,7 +74,9 @@
         $name = $row['title'];
         $price = $row['price'];
         $description = $row['description'];
-        $photo_main = $row['photo_main']['name'];
+        $photo_main = $row['photo_main'];
+        $photo_main_target = "../View/img/".basename($photo_main);
+        move_uploaded_file($row['photo_main'], $photo_main_target);
     }
 
 ?>
