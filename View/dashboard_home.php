@@ -74,7 +74,7 @@
                                 echo "<tr><td>". $row["title"] ."</td><td>". $row["price"]  ."</td><td>". $row["description"] ."</td><td>". $row["photo_main"] ."</td><td>". $row["photo_1"] ."</td><td>". $row["photo_1"] ."</td><td>". $row["photo_2"] ."</td><td>". $row["photo_3"] ."</td>";
                                 ?>
                                 <td>
-                                    <a href="dashboard_home.php?product=<?php echo $row['id']; ?>">Edit</a>
+                                    <a href="dashboard_home.php?edit=<?php echo $row['id']; ?>">Edit</a>
                                     <a href="../Controller/admin_product.php?delete=<?php echo $row['id']; ?>">Delete</a>
                                 </td>
                                 </tr>
@@ -94,14 +94,14 @@
         <div class="add__product">
             <h1>Add Product</h1>
             <form action="../Controller/admin_product.php" method="POST" enctype="multipart/form-data">
-                <input type="text" placeholder="Name" name="title">
+                <input type="text" placeholder="Name" value="<?php echo $name; ?>" name="title">
                 <br>
-                <input type="text" placeholder="Price" name="price">
+                <input type="text" placeholder="Price" value="<?php echo $price; ?>" name="price">
 
                 <div class="photos__row">
                     <div class="file__chooser">
                         <label for="main__photo">Main Photo</label>
-                        <input type="file" id="main__photo" name="main_photo">
+                        <input type="file" id="main__photo" value="" name="main_photo">
                     </div>
 
                     <div class="file__chooser">
@@ -121,7 +121,7 @@
                         <input type="file" id="photo__3"  name="photo_3">
                     </div>
                 </div>
-                <textarea name="description" placeholder="Description"></textarea>
+                <textarea name="description" placeholder="Description"><?php echo $description; ?></textarea>
                 <input name="create__product" type="submit" value="Publish">
             </form>
         </div>

@@ -49,5 +49,31 @@
         }
     }
 
+    $name = "";
+    $price = "";
+    $description = "";
     
+
+    if(isset($_GET['delete'])){
+        global $connection;
+
+        $id = $_GET['delete'];
+        $sql = "DELETE FROM `product` WHERE id=$id";
+        $result = mysqli_query($connection,$sql) or die(mysqli_error($connection));
+
+        header("location: ../View/dashboard_home.php");
+    }
+
+    if(isset($_GET['edit'])){
+        global $connection;
+        $id = $_GET['edit'];
+
+        $sql = "SELECT * FROM `product` WHERE id = $id";
+        $result = mysqli_query($connection,$sql) or die(mysqli_error($connection));
+        $row = $result->fetch_array();
+        $name = $row['title'];
+        $price = $row['price'];
+        $description = $row['description'];
+    }
+
 ?>
