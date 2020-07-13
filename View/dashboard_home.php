@@ -95,6 +95,7 @@
             <h1>Add Product</h1>
             <form action="../Controller/admin_product.php" method="POST" enctype="multipart/form-data">
                 <input type="text" placeholder="Name" value="<?php echo $name; ?>" name="title">
+                <input type="hidden" value="<?php echo $id; ?>" name="id">
                 <br>
                 <input type="text" placeholder="Price" value="<?php echo $price; ?>" name="price">
 
@@ -122,7 +123,18 @@
                     </div>
                 </div>
                 <textarea name="description" placeholder="Description"><?php echo $description; ?></textarea>
-                <input name="create__product" type="submit" value="Publish">
+                <?php
+                    if($update){
+                        ?>
+                            <input name="update" type="submit" value="Update">
+                        <?php
+                    } else {
+                        ?>
+                            <input name="create__product" type="submit" value="Publish">
+                        <?php
+                    }
+                ?>
+                
             </form>
         </div>
     </div>

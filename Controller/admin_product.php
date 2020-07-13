@@ -29,7 +29,7 @@
         move_uploaded_file($_FILES['photo_3']['tmp_name'], $photo_3_target);
         
 
-        $description=$_SESSION['description'];
+        $description=$_POST['description'];
         $user_ID = $_SESSION['id'];
 
         $product = new Product($title,$price,$description,$photo_main,$photo_1,$photo_2,$photo_3,$user_ID);
@@ -52,6 +52,8 @@
     $name = "";
     $price = "";
     $description = "";
+    $id = "";
+    $update = false;
     
 
     if(isset($_GET['delete'])){
@@ -74,9 +76,23 @@
         $name = $row['title'];
         $price = $row['price'];
         $description = $row['description'];
-        $photo_main = $row['photo_main'];
-        $photo_main_target = "../View/img/".basename($photo_main);
-        move_uploaded_file($row['photo_main'], $photo_main_target);
+        $update = true;
+    }
+
+    if(isset($_POST['update'])){
+        $title = $_POST['title'];
+        $price = $_POST['price'];
+        $description=$_POST['description'];
+        $user_ID = $_SESSION['id'];
+
+        $id = $_POST['id'];
+        global $connection;
+        $sql = "SELECT * FROM `product` WHERE id=$id";
+        $result = mysqli_query($connection,$sql) or die(mysqli_error($connection));
+        $row = $result->fetch_array();
+        $product = new Product($title,$price,$description,$row['photo_main'],$row['photo_1'],$row['photo_2'],$row['photo_3'],$user_ID);
+        edit($product);
+        header("location: ../View/dashboard_home.php");
     }
 
 ?>
