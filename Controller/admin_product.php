@@ -80,6 +80,7 @@
     }
 
     if(isset($_POST['update'])){
+        session_start();
         $title = $_POST['title'];
         $price = $_POST['price'];
         $description=$_POST['description'];

@@ -45,7 +45,7 @@
     </header>
 
     <div class="upload_form">
-        <div class="product_table">
+        <!-- <div class="product_table"> -->
             <div class="tabela-forma">
                 <?php
                     require_once "../Controller/admin_product.php";
@@ -89,7 +89,7 @@
                     ?>
                 </table>
             </div>
-        </div>
+        <!-- </div> -->
 
         <div class="add__product">
             <h1>Add Product</h1>
@@ -137,6 +137,7 @@
                 
             </form>
         </div>
+        
     </div>
 </body>
 </html>
