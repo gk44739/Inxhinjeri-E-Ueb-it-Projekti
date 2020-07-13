@@ -196,7 +196,7 @@
                                         <h2>Only <?php echo $row['price']; ?> </h2>
                                         <h1><?php echo $row['title']; ?></h1>
                                         
-                                        <a href="shop.php?product=<?php echo $row['id']; ?>"><button>Buy IT now <i class="fas fa-chevron-right"></i></button></a>
+                                        <a href="shop.php?product=<?php echo $row['id']; ?>"><button>Buy it now <i class="fas fa-chevron-right"></i></button></a>
                                     </div>
                                 </div>
                             </div>
