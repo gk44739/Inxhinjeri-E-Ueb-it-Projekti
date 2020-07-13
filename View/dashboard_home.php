@@ -45,38 +45,44 @@
     </header>
 
     <div class="upload_form">
-        <h1>Add Product</h1>
-        <form action="../Controller/admin_product.php" method="POST" enctype="multipart/form-data">
-            <input type="text" placeholder="Name" name="title">
-            <br>
-            <input type="text" placeholder="Price" name="price">
+        <div class="product_table">
+        
+        </div>
 
-            <div class="photos__row">
-                <div class="file__chooser">
-                    <label for="main__photo">Main Photo</label>
-                    <input type="file" id="main__photo" name="main_photo">
+        <div class="add__product">
+            <h1>Add Product</h1>
+            <form action="../Controller/admin_product.php" method="POST" enctype="multipart/form-data">
+                <input type="text" placeholder="Name" name="title">
+                <br>
+                <input type="text" placeholder="Price" name="price">
+
+                <div class="photos__row">
+                    <div class="file__chooser">
+                        <label for="main__photo">Main Photo</label>
+                        <input type="file" id="main__photo" name="main_photo">
+                    </div>
+
+                    <div class="file__chooser">
+                        <label for="photo__1">Featured Photo</label>
+                        <input type="file" id="photo__1" name="photo_1">
+                    </div>
                 </div>
 
-                <div class="file__chooser">
-                    <label for="photo__1">Featured Photo</label>
-                    <input type="file" id="photo__1" name="photo_1">
-                </div>
-            </div>
+                <div class="photos__row">
+                    <div class="file__chooser">
+                        <label for="photo__2">Photo 2</label>
+                        <input type="file" id="photo__2"  name="photo_2">
+                    </div>
 
-            <div class="photos__row">
-                <div class="file__chooser">
-                    <label for="photo__2">Photo 2</label>
-                    <input type="file" id="photo__2"  name="photo_2">
+                    <div class="file__chooser">
+                        <label for="photo__3">Photo 3</label>
+                        <input type="file" id="photo__3"  name="photo_3">
+                    </div>
                 </div>
-
-                <div class="file__chooser">
-                    <label for="photo__3">Photo 3</label>
-                    <input type="file" id="photo__3"  name="photo_3">
-                </div>
-            </div>
-            <textarea name="description" placeholder="Description"></textarea>
-            <input name="create__product" type="submit" value="Publish">
-        </form>
+                <textarea name="description" placeholder="Description"></textarea>
+                <input name="create__product" type="submit" value="Publish">
+            </form>
+        </div>
     </div>
 </body>
 </html>
