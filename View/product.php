@@ -97,25 +97,24 @@
                 <div class="container">
                     <div class="shop__product__inner">
 
-
-                                
-
-
-
-
-
-
-
+                        <?php
+                            require('../Model/connection_db.php');
+                            global $connection;
+                            $id = $_GET['product'];
+                            $sql = "SELECT * FROM `product` WHERE id=$id";
+                            $result = mysqli_query($connection,$sql) or die(mysqli_error($connection));
+                            $row = $result->fetch_array();
+                        ?>       
 
                         <div class="shop__product__text">
                             <div class="shop__product__tittle">
-                                <h1>PowerWave Wireless Charge</h1>
+                                <h1><?php echo $row['title']; ?></h1>
                                 <div class="shop__product__price">
                                     <span class="old__price">103.20</span>
-                                    <span class="price">98.04</span>
+                                    <span class="price"><?php echo $row['price']; ?></span>
                                 </div>
                             </div>
-                            <p class="text__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam et, aliquid eveniet nisi hic illum, est vel porro repudiandae assumenda repellendus natus veritatis laboriosam minima.</p>
+                            <p class="text__description"><?php echo $row['description']; ?></p>
                             <form>
                                 <label for="quantity">Quantity :</label>
                                 <div class="costum__input">
@@ -134,14 +133,14 @@
 
                         <div class="shop__product__photos">
                             <div class="shop__product__img">
-                                <img src="img/product-1.png">
+                                <img src="img/<?php echo $row['photo_main']; ?>">
                             </div>
                             <div class="shop__product__img__nav">
                                 <ul class="shop__thumbnails">
-                                    <li class="shop__thumbnails__li active"><img src="img/product-1.png"></li>
-                                    <li class="shop__thumbnails__li"><img src="img/product-2.png"></li>
-                                    <li class="shop__thumbnails__li"><img src="img/product-3.png"></li>
-                                    <li class="shop__thumbnails__li"><img src="img/product-4.png"></li>
+                                    <li class="shop__thumbnails__li active"><img src="img/<?php echo $row['photo_main']; ?>"></li>
+                                    <li class="shop__thumbnails__li"><img src="img/<?php echo $row['photo_1']; ?>"></li>
+                                    <li class="shop__thumbnails__li"><img src="img/<?php echo $row['photo_2']; ?>"></li>
+                                    <li class="shop__thumbnails__li"><img src="img/<?php echo $row['photo_3']; ?>"></li>
                                 </ul>
                             </div>
                         </div>
