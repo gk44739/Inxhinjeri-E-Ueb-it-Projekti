@@ -111,14 +111,14 @@
 
                         <div class="contact_form_contaier">
                             <h1>Contact Form</h1>
-                            <form action="../Controller/contact_user.php" method="POST" enctype="multipart/form-data">
+                            <form action="../Controller/contact_user.php" method="POST" enctype="multipart/form-data" onsubmit="return contactValidation()">
                                 <div class="form_item">
                                     <label for="subject">Subject</label>
-                                    <input name="subject" type="text" placeholder="Subject" >
+                                    <input name="subject" type="text" placeholder="Subject" id="subject">
                                 </div>
                                 <div class="form_item">
                                     <label for="email">Email</label>
-                                    <input name="email" class="custom-file-input" placeholder="Your@email.com" type="email">
+                                    <input name="email" class="custom-file-input" placeholder="Your@email.com" type="text" id="email">
                                 </div>
                                 <div class="form_item attc">
                                     <span>Attachment</span>
@@ -132,7 +132,7 @@
 
                                 <div class="message_item">
                                     <label for="message">Message</label>
-                                    <textarea name="message" placeholder="How can we help?"></textarea>
+                                    <textarea name="message" placeholder="How can we help?" id="message"></textarea>
                                 </div>
                                 <button class="submit_button" type="submit">Send</button>
 
@@ -183,5 +183,6 @@
             </div>
         </footer>
         <script src="js/main.js"></script>
+        <script src="js/contact-validation.js"></script>
     </body>
 </html>
