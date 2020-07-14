@@ -92,13 +92,13 @@
             </div>
             
             <div class="user__form__inputs">
-                <form action="../Controller/admin_users.php" method="POST">
+                <form action="../Controller/admin_users.php" method="POST" onsubmit="return usersValidation()">
                     
-                    <input type="text" placeholder="Username" name="username" value="<?php echo $username ?>">
+                    <input type="text" placeholder="Username" name="username" id="usernameField" value="<?php echo $username ?>">
                     <br>
-                    <input type="email" placeholder="Email" name="email" value="<?php echo $email ?>">
+                    <input type="text" placeholder="Email" name="email" id="emailField" value="<?php echo $email ?>">
                     <br>
-                    <input type="password" placeholder="Password" name="password">
+                    <input type="password" placeholder="Password" id="passwordField" name="password">
                     <br>
                     <select name="role" value="<?php echo $roli ?>">
                         <option value="0">Administrator</option>
@@ -122,5 +122,6 @@
             
         </div>
     </div>
+    <script src="js/admin-validation.js"></script>
 </body>
 </html>

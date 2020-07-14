@@ -50,11 +50,11 @@
         
         <div class="add__product">
             <h1>Add Product</h1>
-            <form action="../Controller/admin_product.php" method="POST" enctype="multipart/form-data">
-                <input type="text" placeholder="Name" value="<?php echo $name; ?>" name="title">
+            <form action="../Controller/admin_product.php" method="POST" enctype="multipart/form-data" onsubmit="return productValidation()">
+                <input type="text" placeholder="Name" value="<?php echo $name; ?>" name="title" id="productName">
                 <input type="hidden" value="<?php echo $id; ?>" name="id">
                 <br>
-                <input type="text" placeholder="Price" value="<?php echo $price; ?>" name="price">
+                <input type="text" placeholder="Price" value="<?php echo $price; ?>" name="price" id="productPrice">
 
                 <div class="photos__row">
                     <div class="file__chooser">
@@ -79,7 +79,7 @@
                         <input type="file" id="photo__3"  name="photo_3">
                     </div>
                 </div>
-                <textarea name="description" placeholder="Description"><?php echo $description; ?></textarea>
+                <textarea name="description" placeholder="Description" id="productDescription"><?php echo $description; ?></textarea>
                 <?php
                     if($update){
                         ?>
@@ -145,5 +145,6 @@
         </div>
         
     </div>
+    <script src="js/admin-validation.js"></script>
 </body>
 </html>
