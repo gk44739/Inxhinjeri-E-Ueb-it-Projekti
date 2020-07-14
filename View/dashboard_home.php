@@ -36,61 +36,18 @@
         <nav>
             <ul>
                 <li><a href="home.php">Website</a></li>
-                <li><a href="dashboard_home.php">Add Product</a></li>
-                <li><a href="about.php">View Products</a></li>
+                <li><a href="dashboard_home.php">Products</a></li>
                 <li><a href="dashboard_users.php">Users</a></li>
                 <li><a href="contact.php">Messages</a></li>
             </ul>
         </nav>
     </header>
-
+    <?php
+        require_once "../Controller/admin_product.php";
+        require "../Model/connection_db.php";
+    ?>
     <div class="upload_form">
-        <div class="product_table">
-            <div class="tabela-forma">
-                <?php
-                    require_once "../Controller/admin_product.php";
-                ?>
-                <table class="tabelaUser">
-                    <tr>
-                  
-                        <th>Titulli</th>
-                        <th>Cmimi</th>
-                        <th>Pershkrimi</th>
-                        <th>Foto Kryesore</th>
-                        <th>Foto 1</th>
-                        <th>Foto 2</th>
-                        <th>Foto 3</th>
-                        <th colspan="2">Action</th>
-                    </tr>   
-                    <?php
-                        require "../Model/connection_db.php";
-                        global $connection;
-
-                        $sql = "select * from product";
-                        $result = $connection->query($sql);
-
-                        if ($result->num_rows > 0){
-                            while($row = $result-> fetch_assoc()){
-                                echo "<tr><td>".$row["title"]."</td><td>".$row["price"]."</td><td>".$row["description"]."</td><td>".$row["photo_main"]."</td><td>".$row["photo_1"] ."</td><td>".$row["photo_2"]."</td><td>".$row["photo_3"]."</td>";
-                                ?>
-                                <td>
-                                    <a href="dashboard_home.php?edit=<?php echo $row['id']; ?>">Edit</a>
-                                    <a href="../Controller/admin_product.php?delete=<?php echo $row['id']; ?>">Delete</a>
-                                </td>
-                                </tr>
-                                <?php
-                            }
-                                echo "</table>";
-                        }else{
-                            echo "0 result";
-                        }
-                        $connection->close();
-
-                    ?>
-                </table>
-            </div>
-        </div>
-
+        
         <div class="add__product">
             <h1>Add Product</h1>
             <form action="../Controller/admin_product.php" method="POST" enctype="multipart/form-data">
@@ -136,6 +93,55 @@
                 ?>
                 
             </form>
+        </div>
+
+        <div class="product_table">
+            <?php
+                require_once "../Controller/admin_product.php";
+                require "../Model/connection_db.php";
+            ?>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Photos</th>
+                    <th>Action</th>
+                    
+                </tr>   
+                <?php
+                    
+                    global $connection;
+
+                    $sql = "SELECT * FROM product";
+                    $result = $connection->query($sql);
+
+                    if ($result->num_rows > 0){
+                        while($row = $result-> fetch_assoc()){
+                            echo "<tr><td>".$row["title"]."</td>
+                                    <td>".$row["price"]."</td>
+                                    <td width='300px'>".$row["description"]."</td>
+                                    <td><p><span>Main Photo :</span> ".$row["photo_main"]."</p>
+                                    <p><span>Featured Photo :</span> ".$row["photo_1"] ."</p>
+                                    <p><span>Photo 3 :</span> ".$row["photo_2"] ."</p>
+                                    <p><span>Photo 4 :</span> ".$row["photo_3"] ."</p>
+                                    </td>";
+                            ?>
+                            
+                            <td>
+                                <a href="dashboard_home.php?edit=<?php echo $row['id']; ?>"><button>Edit</button></a>
+                                <a href="../Controller/admin_product.php?delete=<?php echo $row['id']; ?>"><button>Delete</button></a>
+                            </tr>
+                            <?php
+                        }
+                            echo "</table>";
+                    }else{
+                        echo "0 result";
+                    }
+                    $connection->close();
+
+                ?>
+            </table>
         </div>
         
     </div>

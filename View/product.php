@@ -82,12 +82,19 @@
                 </div>
             </div>
         </header>
-
+        <?php
+            require('../Model/connection_db.php');
+            global $connection;
+            $id = $_GET['product'];
+            $sql = "SELECT * FROM `product` WHERE id=$id";
+            $result = mysqli_query($connection,$sql) or die(mysqli_error($connection));
+            $row = $result->fetch_array();
+        ?>  
         <main>
             <div class="shop__tittle__banner">
                 <div class="container">
                     <div class="shop__tittle__banner__inner">
-                        <h1>PowerWave Wireless Charge</h1>
+                        <h1><?php echo $row["title"];?></h1>
                         <p>Home / Product</p>
                     </div>
                 </div>
@@ -97,14 +104,7 @@
                 <div class="container">
                     <div class="shop__product__inner">
 
-                        <?php
-                            require('../Model/connection_db.php');
-                            global $connection;
-                            $id = $_GET['product'];
-                            $sql = "SELECT * FROM `product` WHERE id=$id";
-                            $result = mysqli_query($connection,$sql) or die(mysqli_error($connection));
-                            $row = $result->fetch_array();
-                        ?>       
+                            
 
                         <div class="shop__product__text">
                             <div class="shop__product__tittle">

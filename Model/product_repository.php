@@ -38,13 +38,14 @@ function edit(Product $product){
     $id = $product->getId();
     $title = $product->getTitle();
     $price = $product->getPrice();
+    $description=$product->getDescription();
     $photo_main = $product->getPhoto_main();
     $photo_1 = $product->getPhoto_1();
     $photo_2 = $product->getPhoto_2();
     $photo_3 = $product->getPhoto_3();
     $userID = $product->getUserID();
         
-    $sql = "UPDATE product SET `price`='$price' , `photo_main`='$photo_main' , `photo_1`='$photo_1' ,`photo_2`='$photo_2' ,`photo_3`='$photo_3' , `user_ID`='$userID' WHERE id=$id";
+    $sql = "UPDATE product SET `title`='$title' , `price`='$price' ,`description`='$description' , `photo_main`='$photo_main' , `photo_1`='$photo_1' ,`photo_2`='$photo_2' ,`photo_3`='$photo_3' , `user_ID`='$userID' WHERE id=$id";
     $toEdit = mysqli_query($connection,$sql);
 }
 

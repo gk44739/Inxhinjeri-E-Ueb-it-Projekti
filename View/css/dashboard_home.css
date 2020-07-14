@@ -87,7 +87,7 @@ nav ul li a{
 .upload_form .add__product form{
     max-width: 400px;
     margin: 0 auto;
-    padding: 80px 0 20px 0;
+    padding: 30px 0 20px 0;
 }
 .upload_form .add__product form input{
     width: 100%;
@@ -138,41 +138,49 @@ nav ul li a{
 .product_table{
     width: 100%;
 }
-.tabelaUser{
+table{
     border-collapse: collapse;
     width: 100%;
     font-size: 13px;
-    text-align: left;
-    
 }
-
 th{
-    background-color: #e94c37;
+    background-color: #3794bc;
+    font-size: 18px;
     color: white;
-    padding: 5px;
+    padding: 10px;
 }
 td{
-    padding: 10px;
-    font-family: Arial;
+    padding: 5px;
+    text-align: center;
 }
-
-td a{
+td p{
+    margin-bottom: 10px;
+}
+td p span{
+    font-size: 16px;
+    font-weight: bold;
+}
+td a button{
+    border: none;
     text-decoration: none;
-    background-color: #e2343f;
-    font-size: 13px;
-    padding: 6px;
-    color: white;
-    border-radius: 5px;
+    background-color: #ffc107;
+    padding: 10px 15px;
+    color: #343a40;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
-
-td a:nth-child(1){
-    background-color: #41a4c5;
+td a:last-child button{
+    background-color:#de1b1b;
+    color:#fff;
 }
-
+tr{
+    background-color: #3794bc;
+    color: #fff;
+}
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #fff;
+    color: #000;
 }
-
 .combobox{
     margin-top: 20px;
 }
@@ -180,13 +188,6 @@ tr:nth-child(even) {
 .combobox h4{
     padding-top: 5px;
 }
-
 .combobox select {
     margin-top: 10px;
-}
-
-.tabela-forma{
-    overflow: auto;
-    height: 450px;
-    margin-top: 10%;
 }

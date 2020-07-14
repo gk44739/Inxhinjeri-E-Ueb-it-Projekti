@@ -51,6 +51,10 @@
 
     $name = "";
     $price = "";
+    $photo_main="";
+    $photo_1="";
+    $photo_2="";
+    $photo_3="";
     $description = "";
     $id = "";
     $update = false;
@@ -81,17 +85,67 @@
 
     if(isset($_POST['update'])){
         session_start();
+        $id = $_POST['id'];
         $title = $_POST['title'];
         $price = $_POST['price'];
-        $description=$_POST['description'];
-        $user_ID = $_SESSION['id'];
-
-        $id = $_POST['id'];
+        
         global $connection;
         $sql = "SELECT * FROM `product` WHERE id=$id";
         $result = mysqli_query($connection,$sql) or die(mysqli_error($connection));
         $row = $result->fetch_array();
-        $product = new Product($title,$price,$description,$row['photo_main'],$row['photo_1'],$row['photo_2'],$row['photo_3'],$user_ID);
+        
+        if(isset($_FILES['main_photo'])){
+            if($_FILES['main_photo']['size']!=0){
+                $old_img=$row['photo_main'];
+                unlink("../View/img/$old_img");
+                $photo_main = $_FILES['main_photo']['name'];
+                $photo_main_target = "../View/img/".basename($photo_main);
+                move_uploaded_file($_FILES['main_photo']['tmp_name'], $photo_main_target);
+            }else{
+                $photo_main=$row['photo_main'];
+            }
+        }
+
+        if(isset($_FILES['photo_1'])){
+            if($_FILES['photo_1']['size']!=0){
+                $old_img=$row['photo_1'];
+                unlink("../View/img/$old_img");
+                $photo_1 = $_FILES['photo_1']['name'];
+                $photo_main_target = "../View/img/".basename($photo_main);
+                move_uploaded_file($_FILES['photo_1']['tmp_name'], $photo_main_target);
+            }else{
+                $photo_1=$row['photo_1'];
+            }
+        }
+
+        if(isset($_FILES['photo_2'])){
+            if($_FILES['photo_2']['size']!=0){
+                $old_img=$row['photo_2'];
+                unlink("../View/img/$old_img");
+                $photo_2 = $_FILES['photo_2']['name'];
+                $photo_main_target = "../View/img/".basename($photo_main);
+                move_uploaded_file($_FILES['photo_2']['tmp_name'], $photo_main_target);
+            }else{
+                $photo_2=$row['photo_2'];
+            }
+        }
+
+        if(isset($_FILES['photo_3'])){
+            if($_FILES['photo_3']['size']!=0){
+                $old_img=$row['photo_3'];
+                unlink("../View/img/$old_img");
+                $photo_3 = $_FILES['photo_3']['name'];
+                $photo_main_target = "../View/img/".basename($photo_main);
+                move_uploaded_file($_FILES['photo_3']['tmp_name'], $photo_main_target);
+            }else{
+                $photo_3=$row['photo_3'];
+            }
+        }
+
+        $description=$_POST['description'];
+        $user_ID = $_SESSION['id'];
+
+        $product = new Product($title,$price,$description,$photo_main,$photo_1,$photo_2,$photo_3,$user_ID);
         edit($product);
         header("location: ../View/dashboard_home.php");
     }

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 100%;
+    height: 100vh;
     overflow: auto;
 }
 .users__form h1{
@@ -12,20 +12,28 @@
 .users__form__inner{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .users__table{
-    width: 60%;
-    text-align: center;
-}
-.user__form__inputs{
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:100px 0;
+    text-align: center;
+    padding: 30px 5px;
+}
+.users__table table{
+    width: 100%;
+}
+.user__form__inputs{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:30px 15px;
 }
 .user__form__inputs form{
-    width: 340px;
+    width: 100%;
 }
 .user__form__inputs form input,
 .user__form__inputs form select{

@@ -36,20 +36,61 @@
         ?>   
         <nav>
             <ul>
-                <li><a href="dashboard_home.php">Add Product</a></li>
-                <li><a href="about.php">View Products</a></li>
+                <li><a href="home.php">Website</a></li>
+                <li><a href="dashboard_home.php">Products</a></li>
                 <li><a href="dashboard_users.php">Users</a></li>
                 <li><a href="contact.php">Messages</a></li>
             </ul>
         </nav>
     </header>
-    
+ 
     <div class="users__form">
         <h1>Users</h1>
         <div class="users__form__inner">
+        
+        
             <div class="users__table">
-                
+            <?php
+                require_once "../Controller/admin_product.php";
+                require "../Model/connection_db.php";
+            ?>
+            <table>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>   
+                <?php
+                    
+                    global $connection;
+
+                    $sql = "SELECT * FROM user";
+                    $result = $connection->query($sql);
+
+                    if ($result->num_rows > 0){
+                        while($row = $result-> fetch_assoc()){
+                            echo "<tr><td>".$row["username"]."</td>
+                                    <td>".$row["email"]."</td>
+                                    <td>".$row["roli"]."</td>";
+                            ?>
+                            
+                            <td>
+                                <a href="dashboard_home.php?edit=<?php echo $row['id']; ?>"><button>Edit</button></a>
+                                <a href="../Controller/admin_product.php?delete=<?php echo $row['id']; ?>"><button>Delete</button></a>
+                            </tr>
+                            <?php
+                        }
+                            echo "</table>";
+                    }else{
+                        echo "0 result";
+                    }
+                    $connection->close();
+
+                ?>
+            </table>
             </div>
+            
             <div class="user__form__inputs">
                 <form action="">
                     
@@ -66,6 +107,8 @@
                     <input type="submit" value="Save">
                 </form>
             </div>
+
+            
         </div>
     </div>
 </body>
