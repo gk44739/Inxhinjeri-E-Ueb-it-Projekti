@@ -2,6 +2,8 @@ function productValidation(){
     var name = document.getElementById('productName').value;
     var price = document.getElementById('productPrice').value;
     var description = document.getElementById('productDescription').value;
+
+
     if(name.trim()==""){
         alert("Please write the product name !");
         return false;

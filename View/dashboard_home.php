@@ -59,7 +59,7 @@
                 <div class="photos__row">
                     <div class="file__chooser">
                         <label for="main__photo">Main Photo</label>
-                        <input type="file" id="main__photo" value="" name="main_photo">
+                        <input type="file" id="main__photo"  name="main_photo">
                     </div>
 
                     <div class="file__chooser">

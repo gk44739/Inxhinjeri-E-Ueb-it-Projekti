@@ -46,8 +46,8 @@
                         <!-- <a href="#"><img src="#"></a> -->
                         <a href="home.php" class="logo"><span>E</span> Shop.</a>
                         <form>
-                            <input type="text" name="search" placeholder="Search...">
-                            <button><i class="fas fa-search"></i></button>
+                            <input type="text" id="searchProduct" name="search" placeholder="Search...">
+                            <button id="searchButton"><i class="fas fa-search"></i></button>
                         </form>
                         <div class="cart">
                             <a href="#">
