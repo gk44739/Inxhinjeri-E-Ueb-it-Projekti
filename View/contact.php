@@ -111,7 +111,7 @@
 
                         <div class="contact_form_contaier">
                             <h1>Contact Form</h1>
-                            <form action="../Controller/contact_user.php" method="POST">
+                            <form action="../Controller/contact_user.php" method="POST" enctype="multipart/form-data">
                                 <div class="form_item">
                                     <label for="subject">Subject</label>
                                     <input name="subject" type="text" placeholder="Subject" >

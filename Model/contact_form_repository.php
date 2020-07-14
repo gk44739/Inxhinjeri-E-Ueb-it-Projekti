@@ -4,7 +4,7 @@ require('contact_form.php');
 
 function create(Contact_Form $contact_form){
     global $connection;
-    $query = "INSERT INTO `contact_form` (`subject`,`email`,`file`,`content`,`sentdate`)VALUES('".$contact_form->getSubject()."','".$contact_form->getEmail()."', '".$contact_form->getFile()."','".$contact_form->getContent()."','".date("Y-m-d H:i:s")."')";
+    $query = "INSERT INTO `contact_form` (`subject`,`email`,`attachment`,`message`,`date/time`)VALUES('".$contact_form->getSubject()."','".$contact_form->getEmail()."', '".$contact_form->getFile()."','".$contact_form->getContent()."','".date("Y-m-d H:i:s")."')";
     $create = mysqli_query($connection, $query) or die(mysqli_error($connection));  
     return $create;  
 }
