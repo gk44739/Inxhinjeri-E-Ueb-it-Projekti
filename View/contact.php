@@ -111,15 +111,10 @@
 
                         <div class="contact_form_contaier">
                             <h1>Contact Form</h1>
-                            <form action="">
+                            <form action="../Controller/contact_user.php" method="POST">
                                 <div class="form_item">
                                     <label for="subject">Subject</label>
-                                    <select id="subject">
-                                        <option selected="selected" value="">Customer Sevice</option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                        <option value=""></option>
-                                      </select>
+                                    <input name="subject" type="text" placeholder="Subject" >
                                 </div>
                                 <div class="form_item">
                                     <label for="email">Email</label>
@@ -129,15 +124,15 @@
                                     <span>Attachment</span>
                                     <div class="form_item_inner">                                    
                                         <label class="fileContainer">
-                                            <i class="fas fa-folder-open"></i> Choose File <input type="file"/>
+                                            <i class="fas fa-folder-open"></i> Choose File <input name="attachment"type="file"/>
                                         </label>
                                         <span class="optional"> Optional</span>
                                     </div>
                                 </div>
 
                                 <div class="message_item">
-                                    <label for="file">Message</label>
-                                    <textarea placeholder="How can we help?"></textarea>
+                                    <label for="message">Message</label>
+                                    <textarea name="message" placeholder="How can we help?"></textarea>
                                 </div>
                                 <button class="submit_button" type="submit">Send</button>
 
