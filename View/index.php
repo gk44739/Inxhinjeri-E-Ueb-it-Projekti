@@ -35,7 +35,7 @@
                 <form action="../Controller/user_register.php" method="POST" onsubmit="return regjistrohu()">
                     <input type="text" name="username_register" placeholder="Username" id="userReg">
                     <br>
-                    <input type="email" name="email_register" placeholder="Email" id="email">
+                    <input type="text" name="email_register" placeholder="Email" id="email">
                     <br>
                     <input type="password" name="password_register" placeholder="Password" id="passReg">
                     <br>

@@ -1,48 +1,43 @@
-var username = "";
-var password = "";
-var email = "";
-
 function kycu() {
   var user = document.getElementById("username").value;
   var pass = document.getElementById("pass").value;
 
-  if (user.trim() == "" || pass.trim() == "") {
-    alert("Please type your username or password");
-    return false;
+  if (user.trim() == "") {
+      alert("Please type your username");
+      return false;
+  }else if(pass.trim() == ""){
+      alert("Please type your password");
+      return false;
   }
 }
 
 function regjistrohu() {
-  var user = document.getElementById("userReg").value;
-  if (user.trim() == "") {
-    alert("Type your username");
-  } else {
-    username = user;
-  }
+    var user = document.getElementById("userReg").value;
+    var pass = document.getElementById("passReg").value;
+    var pass2 = document.getElementById("passConReg").value;
 
-  var pass = document.getElementById("passReg").value;
-  var pass2 = document.getElementById("passConReg").value;
+    var doc = document.getElementById("email").value;
+    var reg = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
-  if (pass.trim() == "" || pass2.trim() == "") {
-    alert("Type your password");
-  } else {
-    if (pass == pass2) {
-      password = pass;
-    } else {
-      alert("Password not matching");
-    }
-  }
+    if(user.trim() == "") {
+        alert("Type your username");
+        return false;
+    }else if(doc.trim() == ""){
+        alert("Type your email");
+        return false;
+    }else if(reg.test(doc) == false){
+        alert("Invalid email adress");
+        return false;
+    }else if(pass.trim() == ""){
+      alert("Type your password");
+      return false;
+    }else if(pass2.trim() == ""){
+      alert("Confirm your password");
+      return false;
+    }else if(pass != pass2){
+      alert("Password not matching !!");
+      return false;
+    }  
 
-  var doc = document.getElementById("email").value;
-  var reg = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-
-  if (doc.trim() == "") {
-    alert("Type your email");
-  } else {
-    if (reg.test(doc) == false) {
-      alert("Invalid email adress");
-    } else {
-      email == doc;
-    }
-  }
+    return true;
 }
