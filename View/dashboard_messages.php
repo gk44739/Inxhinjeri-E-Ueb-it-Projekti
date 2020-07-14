@@ -39,26 +39,31 @@
                 <li><a href="home.php">Website</a></li>
                 <li><a href="dashboard_home.php">Products</a></li>
                 <li><a href="dashboard_users.php">Users</a></li>
-                <li><a href="contact.php">Messages</a></li>
+                <li><a href="dashboard_messages.php">Messages</a></li>
             </ul>
         </nav>
     </header>
- 
-    <div class="message__form">
-        <h1>Users</h1>
-        <div class="message__form__inner">
-        
-        
-            <div class="message__table">
-            <?php
-                require_once "../Controller/admin_users.php";
+    <?php
+                require_once "../Controller/contact_admin.php";
                 require "../Model/connection_db.php";
             ?>
+    <div class="message__form">
+        <h1>User Messages</h1>
+        <div class="message__form__inner">
+            
+        <div class="message__form__inputs">
+                <form action="../Controller/contact_admin.php" method="POST" onsubmit="return usersValidation()">
+                    <textarea placeholder="Click User Message On Table" name="message" readonly><?php echo $message; ?></textarea>
+                </form>
+            </div>
+        
+            <div class="message__table">
+            
             <table>
                 <tr>
-                    <th>Username</th>
+                    <th>Subject</th>
                     <th>Email</th>
-                    <th>Role</th>
+                    <th>Attachment</th>
                     <th>Date / Time</th>
                     <th>Action</>
                 </tr>   
@@ -78,8 +83,8 @@
                             ?>
                             
                             <td>
-                                <a href="dashboard_users.php?edit=<?php echo $row['id']; ?>"><button>Edit</button></a>
-                                <a href="../Controller/admin_users.php?delete=<?php echo $row['id']; ?>"><button>Delete</button></a>
+                                <a href="dashboard_messages.php?message=<?php echo $row['id']; ?>"><button>Message</button></a>
+                                <a href="../Controller/contact_admin.php?delete=<?php echo $row['id']; ?>"><button>Delete</button></a>
                             </tr>
                             <?php
                         }
@@ -93,11 +98,7 @@
             </table>
             </div>
             
-            <div class="message__form__inputs">
-                <form action="../Controller/admin_users.php" method="POST" onsubmit="return usersValidation()">
-                    <textarea placeholder="Click User Message On Table" name="message"><?php echo $row['message']?></textarea>
-                </form>
-            </div>
+            
 
             
         </div>

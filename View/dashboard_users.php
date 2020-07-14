@@ -39,7 +39,7 @@
                 <li><a href="home.php">Website</a></li>
                 <li><a href="dashboard_home.php">Products</a></li>
                 <li><a href="dashboard_users.php">Users</a></li>
-                <li><a href="contact.php">Messages</a></li>
+                <li><a href="dashboard_messages.php">Messages</a></li>
             </ul>
         </nav>
     </header>
