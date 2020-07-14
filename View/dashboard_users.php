@@ -51,7 +51,7 @@
         
             <div class="users__table">
             <?php
-                require_once "../Controller/admin_product.php";
+                require_once "../Controller/admin_users.php";
                 require "../Model/connection_db.php";
             ?>
             <table>
@@ -76,8 +76,8 @@
                             ?>
                             
                             <td>
-                                <a href="dashboard_home.php?edit=<?php echo $row['id']; ?>"><button>Edit</button></a>
-                                <a href="../Controller/admin_product.php?delete=<?php echo $row['id']; ?>"><button>Delete</button></a>
+                                <a href="dashboard_users.php?edit=<?php echo $row['id']; ?>"><button>Edit</button></a>
+                                <a href="../Controller/admin_users.php?delete=<?php echo $row['id']; ?>"><button>Delete</button></a>
                             </tr>
                             <?php
                         }
@@ -92,19 +92,30 @@
             </div>
             
             <div class="user__form__inputs">
-                <form action="">
+                <form action="../Controller/admin_users.php" method="POST">
                     
-                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Username" name="username" value="<?php echo $username ?>">
                     <br>
-                    <input type="email" placeholder="Email">
+                    <input type="email" placeholder="Email" name="email" value="<?php echo $email ?>">
                     <br>
-                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Password" name="password">
                     <br>
-                    <select name="role" >
+                    <select name="role" value="<?php echo $roli ?>">
                         <option value="0">Administrator</option>
                         <option value="1">User</option>
                     </select>
-                    <input type="submit" value="Save">
+                    <?php
+                        if($update){
+                            ?>
+                            <input name ="update"type="submit" value="Update">
+                            <?php
+                        }else{
+                            ?>
+                            <input name="create__user" type="submit" value="Save">
+                            <?php
+                        }
+                    ?>
+                    
                 </form>
             </div>
 

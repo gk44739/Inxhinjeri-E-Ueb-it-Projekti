@@ -16,7 +16,7 @@ class User{
 
     public function getId(){
         global $connection;
-        $result = mysqli_query($connection," SELECT id FROM user WHERE username = '$this->username' "); 
+        $result = mysqli_query($connection,"SELECT id FROM user WHERE username = '$this->username'"); 
         $row = mysqli_fetch_assoc($result);
         return $row['id'];
     }

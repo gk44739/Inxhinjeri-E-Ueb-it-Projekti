@@ -71,8 +71,9 @@ function edit(User $editedUser){
     global $connection;
     if(session()){
         $pass = md5($editedUser->getPassword());
-        $query = "UPDATE `users` SET `username` = '".$editedUser->getUsername()."', `email` = '".$editedUser->getEmail()."', `password` = '$pass', `roli` = '".$editedUser->getRoli()."' WHERE `id` = '".$_SESSION['id']."'";
-        $toEdit = mysqli_query($connection,$query);
+        $userId= $editedUser->getId();
+        $query = "UPDATE `user` SET `username` = '".$editedUser->getUsername()."', `email` = '".$editedUser->getEmail()."', `password` = '$pass', `roli` = '".$editedUser->getRoli()."' WHERE `id` = '".$userId."'";
+        $toEdit = mysqli_query($connection,$query) or die(mysqli_error($connection));
     }else{
         return false;
     }
