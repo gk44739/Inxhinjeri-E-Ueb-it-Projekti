@@ -32,6 +32,7 @@ var sticky = sticky__header.offsetTop;
 }
 
 window.onload=function(){
+    document.querySelectorAll('.home__slider__content')[0].classList.add('visible');
     var slideTime=setInterval(autoPlay,4000);
     var next__button=document.getElementById('next__button');
     if(next__button){

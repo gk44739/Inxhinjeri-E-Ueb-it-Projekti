@@ -96,7 +96,7 @@
         <div class="shop__products">
                 <div class="container">
                     <div class="shop__products__inner">
-                        <h1>Products</h1>
+                        <h1>All Products</h1>
                         <div class="shop__products__row">
                                 <?php
                                     require('../Model/connection_db.php');

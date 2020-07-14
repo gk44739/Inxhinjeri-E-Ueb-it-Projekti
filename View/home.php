@@ -87,59 +87,29 @@
         <div class="home__slider">
             <div class="container">
                 <div class="home__slider__inner">
+                
+                    <?php
+                        require('../Model/connection_db.php');
+                        global $connection;
+                        $query="SELECT * FROM `product`  ORDER BY `id` desc limit 4" ;
+                        $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+                        while($row=$result->fetch_array()){
+                            ?>
+                            <div class="home__slider__content">
 
-                    <div class="home__slider__content visible">
-                        
-                            <div class="home__slider__text">
-                                <h1>MacBook Pro 16”</h1>
-                                <p>Up to 8-core Intel Core i9 processor</p>
-                                <button>View details</button>
+                                <div class="home__slider__text">
+                                    <h1><?php echo $row['title']; ?></h1>
+                                    <p><?php echo $row['description']; ?></p>
+                                    <a href="product.php?product=<?php echo $row['id']; ?>"><button>View details</button></a>
+                                </div>
+                                <div class="home__slider__image">
+                                    <img src="img/<?php echo $row['photo_main']; ?>">
+                                </div>
+                                    
                             </div>
-                            <div class="home__slider__image">
-                                <img src="img/slider-img-1.png">
-                            </div>
-                            
-                     
-                    </div>
-
-                    <div class="home__slider__content">
-                   
-                            <div class="home__slider__text">
-                                <h1>MacBook Pro 13”</h1>
-                                <p>Up to 4-core Intel Core i7 processor</p>
-                                <button>View details</button>
-                            </div>
-                            <div class="home__slider__image">
-                                <img src="img/slider-img-2.png">
-                            </div>
-                        
-                    </div>
-
-                    <div class="home__slider__content">
-                   
-                        <div class="home__slider__text">
-                            <h1>HP Elite Dragonfly</h1>
-                            <p>Ultralight, and ready to impress</p>
-                            <button>View details</button>
-                        </div>
-                        <div class="home__slider__image">
-                            <img src="img/slider-img-3.png">
-                        </div>
-                    
-                    </div>
-
-                    <div class="home__slider__content">
-                   
-                        <div class="home__slider__text">
-                            <h1>Huawei Matebook X PRO 13.9"</h1>
-                            <p>World's First FullView Display: Immersive 13.9-inch 3K touchscreen</p>
-                            <button>View details</button>
-                        </div>
-                        <div class="home__slider__image">
-                            <img src="img/slider-img-4.png">
-                        </div>
-                    
-                    </div>
+                            <?php
+                        }
+                    ?>
 
                     <div id="prev__button"><i class="fas fa-arrow-left"></i></div>
                     <div id="next__button"><i class="fas fa-arrow-right"></i></div>
