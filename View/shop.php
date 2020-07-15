@@ -46,10 +46,10 @@
                 <div class="header__main__inner">
                     <!-- <a href="#"><img src="#"></a> -->
                     <a href="home.php" class="logo"><span>E</span> Shop.</a>
-                    <form>
-                        <input type="text" name="search" placeholder="Search...">
-                        <button><i class="fas fa-search"></i></button>
-                    </form>
+                    <!-- <form> -->
+                        <input type="text" name="search" id="searchProduct" placeholder="Search...">
+                        <button onclick="search()"><i class="fas fa-search"></i></button>
+                    <!-- </form> -->
                     <div class="cart">
                         <a href="#">
                             <span>1</span>
@@ -101,7 +101,7 @@
                                 <?php
                                     require('../Model/connection_db.php');
                                     global $connection;
-                                    $query="SELECT * FROM `product` LIMIT 9";
+                                    $query="SELECT * FROM `product`";
                                     $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
                                     while($row=$result->fetch_array()){
                                         ?>

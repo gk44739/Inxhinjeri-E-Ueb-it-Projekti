@@ -1,3 +1,21 @@
+function search(){
+    var count =0;
+    var input = document.getElementById("searchProduct").value.trim();
+    if(input == ""){
+        alert("Please write the book title");
+    } else {
+        var products = document.getElementsByClassName('book');
+        for(var i=0;i<products.length;i++){
+            if(products[i].children[1].children[0].children[0].textContent.trim().toLowerCase().includes(input.toLowerCase())){
+                products[i].style.display="block";
+                window.scrollTo(0, products[i].offsetTop-300);
+            } else {
+                products[i].style.display="none";
+            }
+        }
+    }
+}
+
 var loginbtn=document.getElementById('login__rid');
 if(loginbtn){
     loginbtn.addEventListener("click", function (){
