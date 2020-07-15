@@ -46,10 +46,10 @@
 
             <div class="forgot_password__form">
                 <h1>Forgot Password</h1>
-                <form action="../Controller/user_register.php" method="POST" onsubmit="return regjistrohu()">
-                    <input type="text" name="username_forgot" placeholder="Username" id="userReg">
+                <form action="" method="POST" onsubmit="return forgotPassword()">
+                    <input type="text" name="username_forgot" placeholder="Username" id="usernameForgot">
                     <br>
-                    <input type="text" name="email_forgot" placeholder="Email" id="email">
+                    <input type="text" name="email_forgot" placeholder="Email" id="emailForgot">
 
                     <button name="change_password">Send Request</button>
                 </form>
