@@ -2,6 +2,13 @@
     require('../Model/connection_db.php');
     require('../Model/employes_repository.php');
 
+    $photo = "";
+    $name = "";
+    $surname = "";
+    $work_position = "";
+    
+    $update = false;
+
     if(isset($_POST['create_employe'])){
 
         $photo = $_FILES['photo']['name'];
@@ -14,7 +21,7 @@
         
 
         $employe = new Employes($photo,$name,$surname,$work_position);
-        if(createWorker($employe)){
+        if(createEmploye($employe)){
         ?>
         <script>
             window.location.href="../View/dashboard_employe.php";
@@ -32,8 +39,14 @@
 
     if(isset($_GET['delete'])){
         global $connection;
-
         $id = $_GET['delete'];
+        $sql = "SELECT * FROM `employes` WHERE id=$id";
+        $result = mysqli_query($connection,$sql) or die(mysqli_error($connection));
+        $row = $result->fetch_array();
+
+        $old_img=$row['photo'];
+        unlink("../View/img/employes/$old_img");
+
         $sql = "DELETE FROM `employes` WHERE id=$id";
         $result = mysqli_query($connection,$sql) or die(mysqli_error($connection));
         
@@ -46,12 +59,7 @@
         exit();
     }
 
-    $photo = "";
-    $name = "";
-    $surname = "";
-    $work_position = "";
     
-    $update = false;
 
     if(isset($_GET['edit'])){
         global $connection;
@@ -64,7 +72,7 @@
         $photo = $row['photo'];
         $name = $row['name'];
         $surname = $row['surname'];
-        $profesioni = $row['work_position'];
+        $work_position = $row['work_position'];
 
         $update = true;
     }

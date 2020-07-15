@@ -39,6 +39,7 @@
                 <li><a href="dashboard_home.php">Products</a></li>
                 <li><a href="dashboard_users.php">Users</a></li>
                 <li><a href="dashboard_messages.php">Messages</a></li>
+                <li><a href="dashboard_employe.php">Employes</a></li>
             </ul>
         </nav>
     </header>

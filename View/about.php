@@ -119,21 +119,23 @@
                     <div class="container">
                         <h1>Our Team</h1>
                         <div class = "inner__container1">
-                            <div class="human">
-                                <img class="imghuman" src="img/person1.png">
-                                <h2 class="peoplename">Adrian Corey</h2>
-                                <p class="jobs">Developer</p>
-                            </div>
-                            <div class="human">
-                                <img class="imghuman" src="img/person2.png">
-                                <h2 class="peoplename">Susan Crossman</h2>
-                                <p class="jobs">Developer</p>
-                            </div>
-                            <div class="human">
-                                <img class="imghuman" src="img/person3.png">
-                                <h2 class="peoplename">Stephen Jenkin</h2>
-                                <p class="jobs"></p>Developer</p>
-                            </div>
+
+                            <?php
+                                require('../Model/connection_db.php');
+                                global $connection;
+                                $query="SELECT * FROM `employes`" ;
+                                $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+                                while($row=$result->fetch_array()){
+                                    ?>
+                                    <div class="human">
+                                        <img class="imghuman" src="img/<?php echo $row['photo']; ?>">
+                                        <h2 class="peoplename"><?php echo $row['name'];?> <?php echo $row['surname']; ?></h2>
+                                        <p class="jobs"><?php echo $row['work_position']; ?></p>
+                                    </div>
+                                    <?php
+                                }
+                            ?>
+                            
                         </div>
                     </div>
                 </div>

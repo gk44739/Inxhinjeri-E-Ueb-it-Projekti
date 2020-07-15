@@ -15,26 +15,26 @@
     flex-wrap: wrap;
 }
 .users__table{
-    width: 50%;
+    width: 100%;
     height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    overflow: auto;
+
 }
 .users__table table{
     width: 100%;
 }
 .user__form__inputs{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding:30px 15px;
 }
 .user__form__inputs form{
-    width: 100%;
+    width: 30%;
 }
 .user__form__inputs form input,
 .user__form__inputs form select{

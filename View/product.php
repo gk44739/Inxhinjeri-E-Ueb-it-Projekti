@@ -110,7 +110,7 @@
                             <div class="shop__product__tittle">
                                 <h1><?php echo $row['title']; ?></h1>
                                 <div class="shop__product__price">
-                                    <span class="old__price">103.20</span>
+                                    <!-- <span class="old__price">103.20</span> -->
                                     <span class="price"><?php echo $row['price']; ?></span>
                                 </div>
                             </div>

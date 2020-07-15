@@ -32,7 +32,7 @@
     padding:30px 15px;
 }
 .message__form__inputs form{
-    width: 100%;
+    width: 60%;
 }
 .message__form__inputs form textarea{
     width: 100%;

@@ -40,14 +40,45 @@
                 <li><a href="dashboard_home.php">Products</a></li>
                 <li><a href="dashboard_users.php">Users</a></li>
                 <li><a href="dashboard_messages.php">Messages</a></li>
+                <li><a href="dashboard_employe.php">Employes</a></li>
             </ul>
         </nav>
     </header>
- 
+    <?php
+        require_once "../Controller/admin_users.php";
+        require "../Model/connection_db.php";
+    ?>
     <div class="users__form">
         <h1>Users</h1>
         <div class="users__form__inner">
-        
+            
+            <div class="user__form__inputs">
+                <form action="../Controller/admin_users.php" method="POST" onsubmit="return usersValidation()">
+                    
+                    <input type="text" placeholder="Username" name="username" id="usernameField" value="<?php echo $username ?>">
+                    <br>
+                    <input type="text" placeholder="Email" name="email" id="emailField" value="<?php echo $email ?>">
+                    <br>
+                    <input type="password" placeholder="Password" id="passwordField" name="password">
+                    <br>
+                    <select name="role" value="<?php echo $roli ?>">
+                        <option value="0">Administrator</option>
+                        <option value="1">User</option>
+                    </select>
+                    <?php
+                        if($update){
+                            ?>
+                            <input name ="update"type="submit" value="Update">
+                            <?php
+                        }else{
+                            ?>
+                            <input name="create__user" type="submit" value="Save">
+                            <?php
+                        }
+                    ?>
+                    
+                </form>
+            </div>
         
             <div class="users__table">
             <?php
@@ -91,33 +122,7 @@
             </table>
             </div>
             
-            <div class="user__form__inputs">
-                <form action="../Controller/admin_users.php" method="POST" onsubmit="return usersValidation()">
-                    
-                    <input type="text" placeholder="Username" name="username" id="usernameField" value="<?php echo $username ?>">
-                    <br>
-                    <input type="text" placeholder="Email" name="email" id="emailField" value="<?php echo $email ?>">
-                    <br>
-                    <input type="password" placeholder="Password" id="passwordField" name="password">
-                    <br>
-                    <select name="role" value="<?php echo $roli ?>">
-                        <option value="0">Administrator</option>
-                        <option value="1">User</option>
-                    </select>
-                    <?php
-                        if($update){
-                            ?>
-                            <input name ="update"type="submit" value="Update">
-                            <?php
-                        }else{
-                            ?>
-                            <input name="create__user" type="submit" value="Save">
-                            <?php
-                        }
-                    ?>
-                    
-                </form>
-            </div>
+            
 
             
         </div>
