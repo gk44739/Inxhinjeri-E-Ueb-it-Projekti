@@ -46,9 +46,27 @@
                 <div class="header__main__inner">
                     <!-- <a href="#"><img src="#"></a> -->
                     <a href="home.php" class="logo"><span>E</span> Shop.</a>
-                    <!-- <form> -->
+                    <!-- <form action="../Controller/search_controller.php" method="POST"> -->
                         <input type="text" name="search" id="searchProduct" placeholder="Search...">
-                        <button onclick="search()"><i class="fas fa-search"></i></button>
+                        <button type="submit" onclick="search()" id="searchButton"><i class="fas fa-search"></i></button>
+                        <script>
+                            function search(){
+                                var input = document.getElementById("searchProduct").value.trim();
+                                if(input == ""){
+                                    alert("Please write the book title");
+                                } else {
+                                    var products = document.getElementsByClassName('book');
+                                    for(var i=0;i<products.length;i++){
+                                        if(products[i].children[1].children[0].children[0].textContent.trim().toLowerCase().includes(input.toLowerCase())){
+                                            products[i].style.display="block";
+                                            window.scrollTo(0, products[i].offsetTop-300);
+                                        } else {
+                                            products[i].style.display="none";
+                                        }
+                                    }
+                                }
+                            }
+                        </script>
                     <!-- </form> -->
                     <div class="cart">
                         <a href="#">
