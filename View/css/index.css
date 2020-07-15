@@ -18,6 +18,7 @@
 }
 .signup__form,
 .login__form,
+.forgot_password__form,
 .signup__description,
 .login__description{
     width: 50%;
@@ -29,6 +30,7 @@
 }
 .signup__form form,
 .login__form form,
+.forgot_password__form form,
 .signup__description form,
 .login__description form{
     width: 100%;
@@ -38,11 +40,13 @@
 
 }
 .signup__form h1,
-.login__form h1{
+.login__form h1,
+.forgot_password__form h1{
     margin-bottom: 30px;
 }
 .signup__form form input,
-.login__form form input{
+.login__form form input,
+.forgot_password__form form input{
     width: 70%;
     border: 1px solid #3794bc;
     border-radius: 20px;
@@ -64,6 +68,9 @@
 .signup__description{
     display: none;
 }
+.forgot_password__form{
+    display: none;
+}
 .login__description,
 .signup__description{
     border-left: 1px solid #ebebeb;
@@ -71,7 +78,8 @@
 #login__rid,
 #signup__rid,
 .signup__form button,
-.login__form button{
+.login__form button,
+.forgot_password__form button{
     margin-top: 20px;
     border: 1px solid #3794bc;
     border-radius: 20px;
@@ -85,7 +93,8 @@
 #login__rid:hover,
 #signup__rid:hover,
 .signup__form button:hover,
-.login__form button:hover{
+.login__form button:hover,
+.forgot_password__form button:hover{
     background-color: #fff;
     border: 1px solid #3794bc;
     color: #3794bc;

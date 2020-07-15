@@ -4,6 +4,7 @@
 var loginbtn=document.getElementById('login__rid');
 if(loginbtn){
     loginbtn.addEventListener("click", function (){
+        document.getElementsByClassName('forgot_password__form')[0].style.display='none';
         document.getElementsByClassName('signup__description')[0].style.display='none';
         document.getElementsByClassName('signup__form')[0].style.display='none';
         document.getElementsByClassName('login__description')[0].style.display='flex';
@@ -14,10 +15,23 @@ if(loginbtn){
 var signupbtn=document.getElementById('signup__rid');
 if(signupbtn){
     signupbtn.addEventListener("click", function (){
+        document.getElementsByClassName('forgot_password__form')[0].style.display='none';
         document.getElementsByClassName('login__description')[0].style.display='none';
         document.getElementsByClassName('login__form')[0].style.display='none';
         document.getElementsByClassName('signup__description')[0].style.display='flex';
         document.getElementsByClassName('signup__form')[0].style.display='flex';
+
+    });
+}
+
+var signupbtn=document.getElementById('forgot__rid');
+if(signupbtn){
+    signupbtn.addEventListener("click", function (){
+        document.getElementsByClassName('forgot_password__form')[0].style.display='flex';
+        document.getElementsByClassName('login__description')[0].style.display='none';
+        document.getElementsByClassName('login__form')[0].style.display='none';
+        document.getElementsByClassName('signup__description')[0].style.display='flex';
+        document.getElementsByClassName('signup__form')[0].style.display='none';
 
     });
 }

@@ -25,7 +25,7 @@
                     <input type="text" name="username_login" placeholder="Username" id="username">
                     <br>
                     <input type="password" name="password_login" placeholder="Password" id="pass">
-                    <p><a href="#">Forgot your password ?</a></p>
+                    <p><a href="#" id="forgot__rid">Forgot your password ?</a></p>
                     <button>LOG IN</button>
                 </form>
             </div>
@@ -41,6 +41,17 @@
                     <br>
                     <input type="password" name="confirmpassword" placeholder="Confirm Password" id="passConReg">
                     <button name="sign__up__clicked">SIGN UP</button>
+                </form>
+            </div>
+
+            <div class="forgot_password__form">
+                <h1>Forgot Password</h1>
+                <form action="../Controller/user_register.php" method="POST" onsubmit="return regjistrohu()">
+                    <input type="text" name="username_forgot" placeholder="Username" id="userReg">
+                    <br>
+                    <input type="text" name="email_forgot" placeholder="Email" id="email">
+
+                    <button name="change_password">Send Request</button>
                 </form>
             </div>
 
