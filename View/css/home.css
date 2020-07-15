@@ -44,10 +44,10 @@ a.logo{
     padding: 30px 0;
 }
 
-.header__main__inner form{
+.header__main__inner .search{
     position: relative;
 }
-.header__main__inner form input{
+.header__main__inner .search input{
     width: 400px;
     font-size: 20px;
     padding: 15px 50px 15px 15px;
@@ -55,11 +55,11 @@ a.logo{
     border: 2px solid #3794bc;
     -webkit-appearance: none;
 }
-.header__main__inner form button:focus,
-.header__main__inner form input:focus{
+.header__main__inner .search button:focus,
+.header__main__inner .search input:focus{
     outline: none;
 }
-.header__main__inner form button{
+.header__main__inner .search button{
     position: absolute;
     background: transparent;
     border: none;
@@ -120,6 +120,9 @@ a.logo{
     justify-content: center;
     padding:25px 0;
     color:#fff;
+}
+.home__slider__inner{
+    position: relative;
 }
 .home__slider{
     position: relative;
@@ -233,6 +236,7 @@ a.logo{
     align-items: center;
 }
 .home__slider__text h1{
+    padding-left: 70px;
     font-size: 50px;
     background-color: #e5e6e8;
 }

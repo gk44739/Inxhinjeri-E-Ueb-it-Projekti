@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <title>E Shop</title>
+    <title>E Shop - Welcome</title>
     <head>
         <!-- FAVICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">

@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    $roli = $_SESSION['role'];
+    if($_SESSION['role']!=0){
+        header("location: home.php");
+    }
+    if(isset($_SESSION['login'])!=true){
+        header("location: dashboard_home.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +33,6 @@
             <a href="dashboard_home.php" class="logo"><span>E</span> Shop.</a>
         </div>
         <?php
-            session_start();
             if(isset($_SESSION['login'])){
                 $username=$_SESSION['username'];
                 ?>
@@ -45,7 +54,7 @@
         </nav>
     </header>
     <?php
-        require_once "../Controller/admin_employe.php";
+        require "../Controller/admin_employe.php";
         require "../Model/connection_db.php";
     ?>
     <div class="upload_form">
@@ -58,11 +67,11 @@
                     <?php
                     if($update){
                         ?>
-                        <img src="img/employes/<?php echo $photo; ?>" alt="">
+                        <img id="preview-image" accept="image/jpg,image/png" src="img/employes/<?php echo $photo; ?>" alt="">
                         <?php
                     }else{
                         ?>
-                        <img src="img/placeholder_employe.jpg" alt="">
+                        <img id="preview-image" accept="image/jpg,image/png" src="img/placeholder_employe.jpg" alt="">
                         <?php
                     }
                     ?>
@@ -70,35 +79,32 @@
                 </div>
                 <div class="file__chooser">
                     <label for="photo">Photo</label>
-                    <input type="file" id="photo"  name="photo">
+                    <input type="file" id="photo" class="img_validate" name="photo">
                 </div>
                 
                 <input type="hidden" value="<?php echo $id; ?>" name="id">
                 <input type="text" placeholder="Name" value="<?php echo $name; ?>" name="name" id="employeName">
                 <input type="text" placeholder="Surname" value="<?php echo $surname; ?>" name="surname" id="employeSurname">
-                <br>
                 <input type="text" placeholder="Work Position" value="<?php echo $work_position; ?>" name="work_position" id="employePosition">
-
-                <?php
-                    if($update){
-                        ?>
-                            <input name="update" type="submit" value="Edit">
-                        <?php
-                    } else {
-                        ?>
-                            <input name="create_employe" type="submit" value="Upload">
-                        <?php
-                    }
-                ?>
-                
+                <div class="submit_employee">
+                    <?php
+                        if($update){
+                            ?>
+                                <input name="update" type="submit" value="Edit">
+                            <?php
+                        } else {
+                            ?>
+                                <input name="create_employe" type="submit" value="Upload">
+                            <?php
+                        }
+                    ?>
+                    <input name="cancel" type="submit" value="Cancel">
+                </div>
             </form>
+            
         </div>
 
         <div class="employe_table">
-            <?php
-                require_once "../Controller/admin_employe.php";
-                require "../Model/connection_db.php";
-            ?>
             <table>
                 <tr>
                     <th>Photo</th>
@@ -141,5 +147,6 @@
         
     </div>
     <script src="js/admin-validation.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

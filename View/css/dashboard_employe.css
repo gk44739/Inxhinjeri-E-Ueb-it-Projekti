@@ -38,11 +38,18 @@
     color: #3d3d3d;
     padding: 5px 0 0 0;
 }
+.submit_employee{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .upload_form .add__employe form input[type="submit"]{
     background-color: #3794bc;
     color: #ffffff;
     border: none;
     cursor: pointer;
+    width: 40%;
 }
 .employe_table{
     width: 100%;

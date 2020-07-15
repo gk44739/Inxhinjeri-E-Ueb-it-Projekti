@@ -78,7 +78,7 @@
     }
 
     if(isset($_POST['cancel'])){
-        header("location: ../View/dashboard_employes.php");
+        header("location: ../View/dashboard_employe.php");
     }
 
     

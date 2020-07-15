@@ -83,6 +83,10 @@
         $update = true;
     }
 
+    if(isset($_POST['cancel'])){
+        header("location: ../View/dashboard_home.php");
+    }
+
     if(isset($_POST['update'])){
         session_start();
         $id = $_POST['id'];

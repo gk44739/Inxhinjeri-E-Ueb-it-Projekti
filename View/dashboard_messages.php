@@ -1,8 +1,18 @@
+<?php
+session_start();
+    $roli = $_SESSION['role'];
+    if($_SESSION['role']!=0){
+        header("location: home.php");
+    }
+    if(isset($_SESSION['login'])!=true){
+        header("location: dashboard_home.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Users</title>
+    <title>Dasshboard Messages</title>
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -23,7 +33,6 @@
             <a href="dashboard_home.php" class="logo"><span>E</span> Shop.</a>
         </div>
         <?php
-            session_start();
             if(isset($_SESSION['login'])){
                 $username=$_SESSION['username'];
                 ?>

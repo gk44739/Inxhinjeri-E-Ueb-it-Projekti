@@ -58,6 +58,10 @@
         $update = true;
     }
 
+    if(isset($_POST['cancel'])){
+        header("location: ../View/dashboard_users.php");
+    }
+
     if(isset($_POST['update'])){
         session_start();
         $username_update = $_POST['username'];

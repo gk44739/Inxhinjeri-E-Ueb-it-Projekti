@@ -1,8 +1,18 @@
+<?php
+session_start();
+    $roli = $_SESSION['role'];
+    if($_SESSION['role']!=0){
+        header("location: home.php");
+    }
+    if(isset($_SESSION['login'])!=true){
+        header("location: dashboard_home.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Users</title>
+    <title>Dasshboard Users</title>
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -23,7 +33,6 @@
             <a href="dashboard_home.php" class="logo"><span>E</span> Shop.</a>
         </div>
         <?php
-            session_start();
             if(isset($_SESSION['login'])){
                 $username=$_SESSION['username'];
                 ?>
@@ -65,18 +74,20 @@
                         <option value="0">Administrator</option>
                         <option value="1">User</option>
                     </select>
-                    <?php
-                        if($update){
-                            ?>
-                            <input name ="update"type="submit" value="Update">
-                            <?php
-                        }else{
-                            ?>
-                            <input name="create__user" type="submit" value="Save">
-                            <?php
-                        }
-                    ?>
-                    
+                    <div class="submit_users">
+                        <?php
+                            if($update){
+                                ?>
+                                <input name ="update"type="submit" value="Update">
+                                <?php
+                            }else{
+                                ?>
+                                <input name="create__user" type="submit" value="Create">
+                                <?php
+                            }
+                        ?>
+                        <input name="cancel" type="submit" value="Cancel">
+                    </div>
                 </form>
             </div>
         

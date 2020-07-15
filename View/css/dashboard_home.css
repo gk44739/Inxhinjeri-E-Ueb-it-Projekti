@@ -129,11 +129,18 @@ nav ul li a{
     padding: 10px 5px;
     margin-bottom: 20px;
 }
+.submit_home{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .upload_form .add__product form input[type="submit"]{
     background-color: #3794bc;
     color: #ffffff;
     border: none;
     cursor: pointer;
+    width: 40%;
 }
 .product_table{
     width: 100%;

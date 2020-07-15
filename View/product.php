@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <title>E Shop</title>
+    <title>E Shop - Product</title>
     <head>
         <!-- FAVICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -45,16 +45,16 @@
                     <div class="header__main__inner">
                         <!-- <a href="#"><img src="#"></a> -->
                         <a href="home.html" class="logo"><span>E</span> Shop.</a>
-                        <form>
-                            <input type="text" name="search" placeholder="Search...">
-                            <button><i class="fas fa-search"></i></button>
-                        </form>
-                        <div class="cart">
+                        <div class="search">
+                            <input type="text" name="search" id="searchProduct" placeholder="Search...">
+                            <button type="submit" onclick="search()" id="searchButton"><i class="fas fa-search"></i></button> 
+                        </div>
+                        <!-- <div class="cart">
                             <a href="#">
                                 <span>1</span>
                                 <i class="fas fa-shopping-bag"></i>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -110,25 +110,36 @@
                             <div class="shop__product__tittle">
                                 <h1><?php echo $row['title']; ?></h1>
                                 <div class="shop__product__price">
-                                    <!-- <span class="old__price">103.20</span> -->
                                     <span class="price"><?php echo $row['price']; ?></span>
                                 </div>
                             </div>
                             <p class="text__description"><?php echo $row['description']; ?></p>
-                            <form>
-                                <label for="quantity">Quantity :</label>
-                                <div class="costum__input">
-                                    <input type="number" value="1">
-                                    <div id="plus">
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                    <div id="minus"><span></span></div>
-                                </div>
-                                <button>Buy Now</button>
-                            </form>
-                            <p>Availability : In Stock</p>
-                            <p>Shipping Tax : Free</p>
+                            
+                                <?php
+                                    if(isset($_SESSION['login'])){
+                                        $role=$_SESSION['role'];
+                                        if($role==0){
+                                            ?>
+                                            <form>
+                                                <label for="quantity">Quantity :</label>
+                                                <div class="costum__input">
+                                                    <input type="number" value="1">
+                                                    <div id="plus">
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                    <div id="minus"><span></span></div>
+                                                </div>
+                                                <button>Buy Now</button>
+                                            </form>
+                                            <p>Availability : In Stock</p>
+                                            <p>Shipping Tax : Free</p>
+                                            <?php
+                                        }
+                                    }
+                                ?>
+                                
+                            
                         </div>
 
                         <div class="shop__product__photos">
@@ -164,6 +175,7 @@
                                 <li><a href="home.html">Home</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="contact.html">Contact</a></li>
+                                <li><a href="https://github.com/gk44739/Inxhinjeri-E-Ueb-it-Projekti.git">Git Repository</a></li>
                             </ul>
                         </div>
                     </div>

@@ -45,16 +45,16 @@
                     <div class="header__main__inner">
                         <!-- <a href="#"><img src="#"></a> -->
                         <a href="home.php" class="logo"><span>E</span> Shop.</a>
-                        <form>
-                            <input type="text" id="searchProduct" name="search" placeholder="Search...">
-                            <button id="searchButton"><i class="fas fa-search"></i></button>
-                        </form>
-                        <div class="cart">
+                        <div class="search">
+                            <input type="text" name="search" id="searchProduct" placeholder="Search...">
+                            <button type="submit" onclick="search()" id="searchButton"><i class="fas fa-search"></i></button> 
+                        </div>
+                        <!-- <div class="cart">
                             <a href="#">
                                 <span>1</span>
                                 <i class="fas fa-shopping-bag"></i>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -183,6 +183,7 @@
                 <div class="home__products__inner">
                     <h1>Products</h1>
                     <div class="home__products__row">
+                        
                             <?php
                                 require('../Model/connection_db.php');
                                 global $connection;
@@ -205,6 +206,7 @@
                                     <?php
                                 }
                             ?>
+                       
                     </div>
                     <a href="shop.php"><button>See All</button></a>
                 </div>

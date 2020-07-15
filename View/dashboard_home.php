@@ -1,3 +1,13 @@
+<?php
+session_start();
+    $roli = $_SESSION['role'];
+    if($_SESSION['role']!=0){
+        header("location: home.php");
+    }
+    if(isset($_SESSION['login'])!=true){
+        header("location: dashboard_home.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +32,6 @@
             <a href="dashboard_home.php" class="logo"><span>E</span> Shop.</a>
         </div>
         <?php
-            session_start();
             if(isset($_SESSION['login'])){
                 $username=$_SESSION['username'];
                 ?>
@@ -60,39 +69,42 @@
                 <div class="photos__row">
                     <div class="file__chooser">
                         <label for="main__photo">Main Photo</label>
-                        <input type="file" id="main__photo"  name="main_photo">
+                        <input type="file" class="img_validate" id="main__photo" name="main_photo">
                     </div>
 
                     <div class="file__chooser">
                         <label for="photo__1">Featured Photo</label>
-                        <input type="file" id="photo__1" name="photo_1">
+                        <input type="file" class="img_validate" id="photo__1" name="photo_1">
                     </div>
                 </div>
 
                 <div class="photos__row">
                     <div class="file__chooser">
                         <label for="photo__2">Photo 2</label>
-                        <input type="file" id="photo__2"  name="photo_2">
+                        <input type="file" class="img_validate" id="photo__2"  name="photo_2">
                     </div>
 
                     <div class="file__chooser">
                         <label for="photo__3">Photo 3</label>
-                        <input type="file" id="photo__3"  name="photo_3">
+                        <input type="file" class="img_validate" id="photo__3"  name="photo_3">
                     </div>
                 </div>
                 <textarea name="description" placeholder="Description" id="productDescription"><?php echo $description; ?></textarea>
-                <?php
-                    if($update){
-                        ?>
-                            <input name="update" type="submit" value="Update">
-                        <?php
-                    } else {
-                        ?>
-                            <input name="create__product" type="submit" value="Publish">
-                        <?php
-                    }
-                ?>
-                
+                <div class="submit_home">
+                    <?php
+                        if($update){
+                            ?>
+                                <input name="update" type="submit" value="Update">
+                            <?php
+                        } else {
+                            ?>
+                                <input name="create__product" type="submit" value="Publish">
+                            <?php
+                        }
+                        
+                    ?>
+                    <input name="cancel" type="submit" value="Cancel">
+                </div>
             </form>
         </div>
 

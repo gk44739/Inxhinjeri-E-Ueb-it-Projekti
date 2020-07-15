@@ -2,7 +2,29 @@ function productValidation(){
     var name = document.getElementById('productName').value;
     var price = document.getElementById('productPrice').value;
     var description = document.getElementById('productDescription').value;
-
+    
+    // var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];    
+    // var arrInputs = document.getElementsByClassName("img_validate");
+    // for (var i = 0; i < arrInputs.length; i++) {
+    //     var oInput = arrInputs[i];
+    //     if (oInput.type == "file") {
+    //         var sFileName = oInput.value;
+    //         if (sFileName.length > 0) {
+    //             var blnValid = false;
+    //             for (var j = 0; j < _validFileExtensions.length; j++) {
+    //                 var sCurExtension = _validFileExtensions[j];
+    //                 if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+    //                     blnValid = true;
+    //                     break;
+    //                 }
+    //             }
+    //             if (!blnValid) {
+    //                 alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions);
+    //                 return false;
+    //             }
+    //         }
+    //     }
+    // }
 
     if(name.trim()==""){
         alert("Please write the product name !");
@@ -16,6 +38,7 @@ function productValidation(){
     }
     return true;
 }
+
 
 function usersValidation(){
     var username = document.getElementById('usernameField').value;
@@ -44,6 +67,29 @@ function employeValidation(){
     var employname = document.getElementById('employeName').value;
     var employsurname = document.getElementById('employeSurname').value;
     var position = document.getElementById('employePosition').value;
+    
+    // var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];    
+    // var arrInputs = document.getElementsByClassName("img_validate");
+    // for (var i = 0; i < arrInputs.length; i++) {
+    //     var oInput = arrInputs[i];
+    //     if (oInput.type == "file") {
+    //         var sFileName = oInput.value;
+    //         if (sFileName.length > 0) {
+    //             var blnValid = false;
+    //             for (var j = 0; j < _validFileExtensions.length; j++) {
+    //                 var sCurExtension = _validFileExtensions[j];
+    //                 if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+    //                     blnValid = true;
+    //                     break;
+    //                 }
+    //             }
+    //             if (!blnValid) {
+    //                 alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions);
+    //                 return false;
+    //             }
+    //         }
+    //     }
+    // }
 
     if(employname.trim()==""){
         alert("Please write the employee name !");

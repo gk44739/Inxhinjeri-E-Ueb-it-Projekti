@@ -45,16 +45,16 @@
                     <div class="header__main__inner">
                         <!-- <a href="#"><img src="#"></a> -->
                         <a href="home.php" class="logo"><span>E</span> Shop.</a>
-                        <form>
-                            <input type="text" name="search" placeholder="Search...">
-                            <button><i class="fas fa-search"></i></button>
-                        </form>
-                        <div class="cart">
+                        <div class="search">
+                            <input type="text" name="search" id="searchProduct" placeholder="Search...">
+                            <button type="submit" onclick="search()" id="searchButton"><i class="fas fa-search"></i></button> 
+                        </div>
+                        <!-- <div class="cart">
                             <a href="#">
                                 <span>1</span>
                                 <i class="fas fa-shopping-bag"></i>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -160,6 +160,7 @@
                                 <li><a href="home.html">Home</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="contact.html">Contact</a></li>
+                                <li><a href="https://github.com/gk44739/Inxhinjeri-E-Ueb-it-Projekti.git">Git Repository</a></li>
                             </ul>
                         </div>
                     </div>
