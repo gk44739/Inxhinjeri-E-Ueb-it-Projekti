@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard Employe</title>
+    <title>Dashboard Employee</title>
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -51,9 +51,9 @@
     <div class="upload_form">
         
         <div class="add__employe">
-            <h1>Add/Edit Employe</h1>
+            <h1>Add/Edit Employee</h1>
             
-            <form action="../Controller/admin_employe.php" method="POST" enctype="multipart/form-data" onsubmit="">
+            <form action="../Controller/admin_employe.php" method="POST" enctype="multipart/form-data" onsubmit="return employeValidation()">
                 <div class="employe__photo">
                     <?php
                     if($update){
@@ -75,7 +75,7 @@
                 
                 <input type="hidden" value="<?php echo $id; ?>" name="id">
                 <input type="text" placeholder="Name" value="<?php echo $name; ?>" name="name" id="employeName">
-                <input type="text" placeholder="Surname" value="<?php echo $surname; ?>" name="surname" id="employeName">
+                <input type="text" placeholder="Surname" value="<?php echo $surname; ?>" name="surname" id="employeSurname">
                 <br>
                 <input type="text" placeholder="Work Position" value="<?php echo $work_position; ?>" name="work_position" id="employePosition">
 

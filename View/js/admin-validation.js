@@ -39,3 +39,21 @@ function usersValidation(){
     }
     return true;
 }
+
+function employeValidation(){
+    var employname = document.getElementById('employeName').value;
+    var employsurname = document.getElementById('employeSurname').value;
+    var position = document.getElementById('employePosition').value;
+
+    if(employname.trim()==""){
+        alert("Please write the employee name !");
+        return false;
+    }else if(employsurname.trim()==""){
+        alert("Please write the employee surname !");
+        return false;
+    }else if(position.trim()==""){
+        alert("Please write the employee work position !");
+        return false;
+    }
+    return true;
+}
